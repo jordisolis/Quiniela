@@ -5,182 +5,599 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" media="all" href="recursos/css/regisQuiniela.css"  />
 <title>Insert title here</title>
 </head>
 <body>
+			<div style="color:red">
+    			<html:errors />
+    		</div>
 <html:form action="/Quiniela" method="get">
- <div id="contenedor">
-		<div id="cuerpo">
-			<div id="bloqueDer">
-				<div id="bloqueQuiniTuya">
-					Tu Quiniela - Jornada 38
-					<table>
+ 
+					<table class="tabla-quini clasi-grup tabla-quiniela" >
 						<tr>
-							<td BGCOLOR="#FF9933">Partido</td>
-							<td BGCOLOR="#FF9933">nº</td>
-							<td  BGCOLOR="#FF9933">
-									<html:text  property="filas" size="1" value="1"></html:text >
-                                	<html:text  property="filas" size="1" value="X"></html:text >
-                                	<html:text   property="filas" size="1" value="2"></html:text > 
-							</td>						
+							<th class="num-fila">P</th>
+							<th class="equipo">Local</th>
+							<th class="equipo">Visitante</th>
+							<th class="pronost">Pronostico</th>
+							<th class="info-directo">Directos</th>
 						</tr>
 						<tr>
-							<td>Almeria - Villarreal</td>
-							<td>1</td>
-							<td  BGCOLOR="#FF9933">
-									<html:multibox  property="partido1"  value="1"></html:multibox>
-                                	<html:multibox  property="partido1" value="X"></html:multibox>
-                                	<html:multibox  property="partido1"  value="2"></html:multibox> 
-							</td>						
+							<td class="num-fila">1</td>
+							<td class="equipo">
+								<span>DEPORTIVO</span>
+							</td>
+							<td class="equipo">
+								<span>R.SOCIEDAD</span>
+							</td>
+							
+							<td class="pronost"  BGCOLOR="#FF9933">
+                                	<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido1"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido1"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido1"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>
+							</td>
+							<td></td>						
 						</tr>
 		
 						<tr>
-							<td>Valladolid - At. Madrid</td>
 							<td>2</td>
+							<td>RAYO</td>
+							<td>VALENCIA</td>
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido2" value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido2"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido2"  value="2"></html:checkbox> 		
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido2"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido2"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido2"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>	
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Betis - Levante</td>
 							<td>3</td>
+							<td>ATH.BILBAO</td>
+							<td>BARCELONA</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido3"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido3"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido3"  value="2"></html:checkbox> 	
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido3"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido3"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido3"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 	
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Getafe - Zaragoza</td>
 							<td>4</td>
+							<td>SPORTING</td>
+							<td>R.MADRID</td>
+							
 							<td BGCOLOR="#FF9933">
-									<html:checkbox  property="partido4"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido4"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido4"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido4"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido4"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido4"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>
 							</td>
 						</tr>
 	
 						<tr>
-							<td>Recreativo - Barcelona</td>
 							<td>5</td>
+							<td>BETIS</td>
+							<td>VILLARREAL</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido5"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido5"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido5"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido5"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido5"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido5"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Espanyol - Osasuna</td>
 							<td>6</td>
+							<td>ESPANYOL</td>
+							<td>GETAFE</td>
+							
 							<td BGCOLOR="#FF9933">
-									<html:checkbox  property="partido6"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido6"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido6"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido6"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido6"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido6"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 	
 						<tr>
-							<td>Deportivo - Atl. Club</td>
 							<td>7</td>
+							<td>LEVANTE</td>
+							<td>CELTA</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido7"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido7"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido7"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido7"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido7"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido7"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Valencia - Racing</td>
 							<td>8</td>
+							<td>ALMERÍA</td>
+							<td>LEGANÉS</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido8"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido8"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido8"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido8"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido8"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido8"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>
 							</td>
 						</tr>
 					
 						<tr>
-							<td>R.Madrid - Murcia</td>
 							<td>9</td>
+							<td>MIRANDÉS</td>
+					        <td>ZARAGOZA</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido9"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido9"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido9"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido9"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido9"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido9"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Hercules - Castellon</td>
 							<td>10</td>
+							<td>LLAGOSTERA</td>
+							<td>OSASUNA</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido10"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido10"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido10"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido10"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido10"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido10"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 		
 						<tr>
-							<td>Salamanca - Las Palmas</td>
 							<td>11</td>
+							<td>OVIEDO</td>
+							<td>LUGO</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido11"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido11"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido11"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido11"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido11"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido11"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table>
 							</td>
 						</tr>
 				
 						<tr>
-							<td>Cadiz - Albacete</td>
 							<td>12</td>
+							<td>GIMNÁSTIC</td>
+							<td>ALBACETE</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido12"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido12"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido12"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido12"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido12"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido12"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 		
-						<tr>
-							<td>Malaga - Sporting</td>
+						<tr>						
 							<td>13</td>
+							<td>ALCORCÓN</td>
+							<td>MALLORCA</td>
+
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido13"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido13"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido13"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido13"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido13"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido13"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 			
 						<tr>
-							<td>Celta - R.Sociedad</td>
 							<td>14</td>
+							<td>CÓRDOBA</td>
+							<td>VALLADOLID</td>
+							
 							<td  BGCOLOR="#FF9933">
-									<html:checkbox  property="partido14"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido14"  value="X"></html:checkbox>
-                                	<html:checkbox  property="partido14"  value="2"></html:checkbox> 
+									<table style="width:50px">
+										<tr>
+											<th class="quini" >
+												<span class="s-left">1</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left">X</span>
+											</th>
+											<th class="quini" >	
+												<span class="s-left ">2</span>
+											</th>
+										
+										</tr>
+										<tr>
+											<td>
+												<html:checkbox  property="partido14"  value="1"> </html:checkbox>
+											</td>
+											<td>	
+                                				<html:checkbox  property="partido14"  value="x"></html:checkbox>
+                                			</td>
+                                			<td>
+                                				<html:checkbox  property="partido14"  value="2"></html:checkbox>
+                                			</td>
+										</tr>	
+									</table> 
 							</td>
 						</tr>
 					</table>
 				
-					<table frame="hsides">
+					<table class="clasi-grup tabla-quini pleno-15 s-dm-b">
+						<thead class="hide">
 						<tr>
-							<td>Mallorca - Sevilla</td>
-							<td>15</td>
-							<td>
-									<html:checkbox  property="partido15"  value="1"> </html:checkbox>
-                                	<html:checkbox  property="partido15" value="X"></html:checkbox>
-                                	<html:checkbox  property="partido15"  value="2"></html:checkbox> 
+							<th>Número de fila</th>
+							<th>Enfrentamiento</th>
+							<th>Pronóstico</th>
+							<th>Directo</th>
+						</tr>
+						</thead>
+						<tr>
+							
+							<td class="num-fila" rowspan="2">15</td>
+							<td class="enfrentamientos">
+								<span>Bielorrusia</span>
+							</td>
+							
+							<td BGCOLOR="#FAAC58">
+								<table style="width:100px">
+									<tr>
+										<th class="quini" >
+											<span class="s-left">0</span>
+										</th>
+										<th class="quini" >	
+											<span class="s-left">1</span>
+										</th>
+										<th class="quini" >	
+											<span class="s-left ">2</span>
+										</th>
+										<th class="quini" >		
+											<span class="s-left "><abbr title="Más">M</abbr></span>
+										</th>	
+										
+									</tr>
+									<tr>
+										<td>
+											<html:checkbox  property="partido15"  value="0"> </html:checkbox>
+										</td>
+										<td>	
+                                			<html:checkbox  property="partido15"  value="1"></html:checkbox>
+                                		</td>
+                                		<td>
+                                			<html:checkbox  property="partido15"  value="2"></html:checkbox>
+                                		</td>
+                                		<td>	
+                                			<html:checkbox  property="partido15"  value="M"></html:checkbox>
+                                		</td>	  
+										
+									</tr>	
+								</table>
+							</td>
+								
+							<td class="info-dir gray" rowspan="2"> 
 							</td>
 						</tr>
+						<tr>
+							<td class="enfrentamientos">
+								<span>España</span>
+							</td>
+							<td BGCOLOR="#FAAC58">
+								<table style="width:100px">
+									<tr>
+										<th class="quini" >
+											<span class="s-left">0</span>
+										</th>
+										<th class="quini" >	
+											<span class="s-left">1</span>
+										</th>
+										<th class="quini" >	
+											<span class="s-left ">2</span>
+										</th>
+										<th class="quini" >		
+											<span class="s-left "><abbr title="Más">M</abbr></span>
+										</th>	
+										
+									</tr>
+									<tr>
+										<td>
+											<html:checkbox  property="partido15"  value="0"></html:checkbox>
+										</td>
+										<td>	
+                                			<html:checkbox  property="partido15"  value="1"></html:checkbox>
+                                		</td>
+                                		<td>
+                                			<html:checkbox  property="partido15"  value="2"></html:checkbox>
+                                		</td>
+                                		<td>	
+                                			<html:checkbox  property="partido15"  value="M"></html:checkbox>
+                                		</td>	  
+										
+									</tr>	
+								</table>
+							</td>	
+						</tr>
 					</table>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+	
 	<html:submit>Envia</html:submit>
 			<br><br>
 	</html:form>

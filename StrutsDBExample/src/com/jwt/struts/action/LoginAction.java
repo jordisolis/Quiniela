@@ -15,7 +15,7 @@ import com.jwt.struts.form.LoginForm;
 
 /**
  *
- * @author jordisolis@gmail.com
+ * @author jordisolis
  */
 public class LoginAction extends Action {
 

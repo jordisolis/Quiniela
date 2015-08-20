@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+ * 
+ * @author jordisolis
+ *
+ */
 public class UserRegisterDAO {
 	public void insertData(String firstName, String lastName, String userName,
 			String password, String email, String phone) throws Exception {

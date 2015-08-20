@@ -11,7 +11,11 @@ import org.apache.struts.action.ActionMapping;
 
 import com.jwt.struts.dao.UserRegisterDAO;
 import com.jwt.struts.form.UserRegisterForm;
-
+/**
+ * 
+ * @author jordisolis
+ *
+ */
 public class UserRegisterAction extends Action {
 	
 	public ActionForward execute(ActionMapping mapping, ActionForm form,

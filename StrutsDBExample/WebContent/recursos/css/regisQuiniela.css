@@ -1,0 +1,143 @@
+@CHARSET "ISO-8859-1";
+
+/*quiniela*/
+.sep-hor-raya {width: 100%; border-top: 1px dashed #d6d6d6; display: block; margin: 2px 0; }
+.drop-quiniela a {width: 170px}
+.drop-quiniela a .itm-media{ margin-top: -2px; margin-right: 6px; }
+.tabla-quini th {border-right:1px solid #d6d6d6; }
+.tabla-quini td {border-right:1px solid #d6d6d6; font-size: 13px;}
+.tabla-quini th.num-fila {width:10px;}
+.tabla-quini th.equipo {width: 184px;}
+.tabla-quini th.pronost {width:54px;}
+.tabla-quini td.info-dir  { text-align: left; padding-left: 8px; width: 142px;}
+.tabla-quini td.info-dir a {color: #666; font: 11px arial, Helvetica; text-decoration: underline; }
+.tabla-quini .quini  { padding-left: 5px}
+.tabla-quini .quini span {font: bold 10px/10px Arial, Helvetica; color: #FFFF77; width: 12px; background: #0A0A2A; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #B9B9B9 0%,#B6B6B6 50%,#929292 51%,#A6A6A6 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,   #B9B9B9 0%,#B6B6B6 50%,#929292 51%,#A6A6A6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B9B9B9', endColorstr='#A6A6A6',GradientType=0 ); /* IE6-9 */
+	border-right: 1px solid #FFFFFF;}
+.tabla-quini .quini span.signo-def {background: #606060; /* Old browsers */
+	background: -webkit-linear-gradient(top, #606060 1%,#5b5b5b 50%,#484848 50%,#484848 50%,#4b4b4b 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #606060 1%,#5b5b5b 50%,#484848 50%,#484848 50%,#4b4b4b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#4b4b4b',GradientType=0 ); /* IE6-9 */ }
+.tabla-quini .quini span.signo-prov {background: #af0202; /* Old browsers */
+	background: -webkit-linear-gradient(top,  #af0202 0%,#c40603 50%,#cf0703 51%,#dd0a03 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #dd0a03 0%,#cf0703 50%,#c40603 51%,#af0202 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd0a03', endColorstr='#af0202',GradientType=0 ); /* IE6-9 */ }
+.pleno-15 {border:1px solid #d6d6d6 }
+.pleno-15 .quini  { width: 92px}
+.pleno-15 .num-fila  { width: 26px}
+.pleno-15 .enfrentamientos { width: 370px; padding-left: 8px; text-align: left;}
+.pleno-15 td {border-top: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6 }
+.leyenda-quini li { float:left; margin-right: 18px; padding-left: 16px; font: 11px arial, Helvetica; color: #666; position: relative;  }
+.leyenda-quini li:before { content: ""; position: absolute; width: 10px; height: 10px; border:1px solid #d6d6d6; top: 1px; left: 0  }
+.leyenda-quini li.prov:before { content: ""; position: absolute; width: 8px; height: 8px;  top: 2px; left:1px; background:#dd0a03; }
+.leyenda-quini li.def:before { content: ""; position: absolute; width: 8px; height: 8px; top: 2px; left:1px; background: #484848; }
+.tabla-premios th { font:13px arial, Helvetica;}
+.tabla-premios td { width: 14.28%}
+
+/** Hidden elements
+---------------------------------------- */
+
+.hide { display: none!important; } 
+
+
+
+/**************************** PROVISIONALES ******************************************/
+/**************************** quniela ******************************************/
+
+@media (max-width: 768px) {
+
+	/******************* img top header *******************/
+	.header-portada .hdr-prt-img{display: none;}
+
+	/*************************** buscador superior ***************************/
+	.hdr-buscador{  width: 230px;left: auto; right: 50px;}
+	.hdr-buscador input[type="text"]{width: 95%;}
+
+	/**** tabla resultados jornada quniela <768px ****/
+	.tabla-quiniela .num-fila{display: none;}
+	.tabla-quiniela tbody tr td:nth-child(1){display: none;}
+	.pleno-15 tbody tr td{display: table-cell;}
+	.pleno-15 tbody tr td:nth-child(4) {display: none;}
+	.tabla-quini .quini {min-width:69px; }
+	.tabla-quini tbody tr th{border-left: 1px solid #d6d6d6;}
+	.tabla-quini tbody tr td{border-left: 1px solid #d6d6d6;}
+	.tabla-quini tbody tr td.num-fila{display: none;}
+	.tabla-quini th.equipo{width: auto;}
+	.tabla-quini tbody tr td a img{display: none;}
+	.pleno-15 .enfrentamientos{width: auto;}
+	.nav-jor .jornadas-sig-ant{float: left;border: none;margin-left: 0px;padding-left: 0px; margin-right: 15px;margin-bottom: 12px;}
+	.nav-jor .drop-quiniela{float: left; }
+	.dropdown ul.drop-l{width: 100%;}
+	.dropdown ul.col-2-btn li, .dropdown ul.col-3-btn li, .dropdown ul.col-6-btn li, .dropdown ul.btn-s li{margin: 6px;}
+
+	/**** tabla premios quniela <360px ****/
+	table.tabla-premios{position: relative;  width: auto;margin: auto;}
+	.tabla-premios thead {width: 70px; float: left; margin-top: 0px;}
+	.tabla-premios thead tr th{clear: left;display: block;width: 45px;text-align: center; vertical-align: center; border-left: 1px solid #d6d6d6; padding-bottom: 1px;}
+	.tabla-premios thead tr th:first-child{height: 25px;}
+	.tabla-premios tbody {  width: 90px;float: left;display: block;margin-left: 62px; position: absolute; top:0px;}
+	.tabla-premios tbody tr{display: table-cell; vertical-align: middle;}
+	.tabla-premios tbody tr th, .tabla-premios tbody tr td{display: inline-block; clear: left; width: 90px; padding-left: 8px; padding-right: 8px;}
+	.tabla-premios tfoot{ display: block;width: 278px; clear: left;}
+
+	
+
+}
+
+@media (max-width: 360px) {
+
+
+	/*************************** buscador superior <360px ***************************/
+	.hdr-buscador{  width: 245px;left: auto; right: 50px;}
+	.hdr-buscador input[type="text"]{width: 160px;}
+
+	/******************** cabecera quniela ***************/
+	.header-portada .hdr-prt-title{font: 3rem/3.6rem 'sourceblack', Arial, Helvetica;}
+	.header-portada .hdr-prt-subtitle{display: none;}
+
+
+	/**** tabla resultados jornada quniela <360px ****/
+	.tabla-quiniela .num-fila{display: none;}
+	.tabla-quiniela thead tr th:nth-child(5){display: none;}
+	.tabla-quiniela tbody tr td:nth-child(1){display: none;}
+	.tabla-quiniela .info-dir{display: none;}
+	.pleno-15 tbody tr td{display: table-cell;}
+	.pleno-15 tbody tr td:nth-child(4) {display: none;}
+	.tabla-quini tbody tr th{border-left: 1px solid #d6d6d6;}
+	.tabla-quini tbody tr td{border-left: 1px solid #d6d6d6;}
+	.tabla-quini tbody tr td.num-fila{display: none;}
+	.tabla-quini th.equipo{width: auto;}
+	.tabla-quini tbody tr td a img{display: none;}
+	.pleno-15 .enfrentamientos{width: auto;}
+
+	/*************************** footer <360px ***************************/
+	.ftr_sup .ftr_sup_int ul li{clear: left; margin-top: 10px;}
+
+
+
+}
+
+.sidebar .clasi-grup td { font-size: 11px; height: 14px;}
+.sidebar .clasi-grup td:first-child { width: 92px; padding-left: 9px} 
+.clasi-grup th{ padding:0 8px; height: 12px; font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;font-size: 11px;font-weight: normal;color: #444444;text-align: center;vertical-align: middle;border-bottom: 1px solid #d6d6d6; border-top: 1px solid #d6d6d6;background: #e9e9e9; /* Old browsers */background: -webkit-linear-gradient(top,  #e9e9e9 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */background: linear-gradient(to bottom,  #fbfbfb 0%,#e9e9e9 100%); /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#e9e9e9',GradientType=0 ); /* IE6-9 */}
+.clasi-grup th:first-child { border-left:1px solid #d6d6d6;} 
+.clasi-grup th:last-child {border-right: 1px solid #d6d6d6;} 
+.clasi-grup th.clasif{width: 200px;}
+.clasi-grup th.ida-vuel{ width: 65px;}
+.clasi-grup th.info-partido{ width: 245px;}
+.clasi-grup th abbr.time-zone, .resul-tenis th abbr.time-zone { font-size: 9px;}
+.clasi-grup td { height: 9px; border-bottom: 1px solid #d6d6d6; text-align: center; vertical-align: middle; font-size: 12px; padding: 1px 0;}
+
+
+.clasi-grup td:last-child {border-right: 1px solid #d6d6d6;} 
+.clasi-grup td:first-child { border-left: 1px solid #d6d6d6; } 
+.clasi-grup td img { display: inline;vertical-align: middle;margin:0 5px;}
+.clasi-grup td.info-partido { vertical-align: top; width:245px;}
+.clasi-grup td.gray {font-size: 11px;padding-left: 8px;color: :#545454;border-left: 1px solid #d6d6d6;background: #e9e9e9; /* Old browsers */background: -webkit-linear-gradient(top,  #e9e9e9 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */background: linear-gradient(to bottom,  #fbfbfb 0%,#e9e9e9 100%); /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#e9e9e9',GradientType=0 ); /* IE6-9 */}
+.clasi-grup a.resultado:hover{ text-decoration: none; opacity: .9;}
+
+
+

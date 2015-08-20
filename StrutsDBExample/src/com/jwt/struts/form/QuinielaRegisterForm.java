@@ -2,7 +2,12 @@ package com.jwt.struts.form;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
 
 public class QuinielaRegisterForm extends ActionForm{
 
@@ -31,6 +36,77 @@ public class QuinielaRegisterForm extends ActionForm{
 	private String [] partido14;
 	private String [] partido15;
 	private int Aciertos;
+	
+	
+	
+	public ActionErrors validate(ActionMapping mapping,
+			HttpServletRequest request) {
+		ActionErrors errors = new ActionErrors();
+		if (partido1 == null || partido1.length < 1) {
+			errors.add("partido1", new ActionMessage(
+					"error.firstName.required"));
+
+		}
+		if (partido2 == null || partido2.length < 1) {
+			errors.add("partido2", new ActionMessage("error.lastName.required"));
+
+		}
+		if (partido3 == null || partido3.length < 1) {
+			errors.add("partido3", new ActionMessage("error.userName.required"));
+
+		}
+		if (partido4 == null || partido4.length < 1) {
+			errors.add("partido4", new ActionMessage("error.password.required"));
+
+		}
+		if (partido5 == null || partido5.length < 1) {
+			errors.add("partido5", new ActionMessage("error.email.required"));
+
+		}
+		if (partido6 == null || partido6.length < 1) {
+			errors.add("partido6", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido7 == null || partido7.length < 1) {
+			errors.add("partido7", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido8 == null || partido8.length < 1) {
+			errors.add("partido8", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido9 == null || partido9.length < 1) {
+			errors.add("partido9", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido10 == null || partido10.length < 1) {
+			errors.add("partido10", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido11 == null || partido11.length < 1) {
+			errors.add("partido11", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido12 == null || partido12.length < 1) {
+			errors.add("partido12", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido13 == null || partido13.length < 1) {
+			errors.add("partido13", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido14 == null || partido14.length < 1) {
+			errors.add("partido14", new ActionMessage("error.phone.required"));
+
+		}
+		if (partido15 == null || partido15.length < 1) {
+			errors.add("partido15", new ActionMessage("error.phone.required"));
+
+		}
+		return errors;
+	}
+	
+	
 	
 	public String[] getPartido2() {
 		return partido2;

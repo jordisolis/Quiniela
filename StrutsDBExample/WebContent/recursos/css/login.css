@@ -19,14 +19,3 @@ h1 {
 	
 }
 
-	/* ------ Dentro de .estilotd3 -----------*/
-	input{
-		color:#C33A22;
-		font-size:9px;
-		width:12px;
-		height:14px;
-		border-style:none;
-		background-color:#FF9F95;
-		background-image:url('imagenes/vacio.jpg');
-		background-repeat:no-repeat;
-	}

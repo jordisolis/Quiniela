@@ -21,7 +21,11 @@ import org.apache.struts.action.ActionMapping;
 
 import com.jwt.struts.form.QuinielaRegisterForm;
 
-
+/**
+ * 
+ * @author jordisolis
+ *
+ */
 public class QuinielaRegisterAction extends Action{
 
 	@SuppressWarnings("unchecked")

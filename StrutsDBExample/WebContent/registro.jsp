@@ -25,7 +25,7 @@
 						Nombre:
 					</td>
 					<td>
-						<html:text property="firstName" size="50" />
+						<html:text property="firstName" size="50"/>
 					</td>
 				</tr>
 				<br>
