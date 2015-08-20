@@ -21,24 +21,6 @@
 			<h1>REGISTRO DE USUARIO:</h1>
 			<table>
 				<tr>
-					<td>
-						Nombre:
-					</td>
-					<td>
-						<html:text property="firstName" size="50"/>
-					</td>
-				</tr>
-				<br>
-				<tr>
-					<td>	
-						Apellidos:
-					</td>
-					<td>	
-						<html:text property="lastName" size="50" />
-					</td>
-				</tr>
-				<br>
-				<tr>
 					<td>		
 						Nombre Usuario:
 					</td>
@@ -52,7 +34,16 @@
 						Password:
 					</td>
 					<td>	
-						<html:text property="password" size="30" />
+						<html:password property="password" size="30" />
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td>		
+						 Repite Password:
+					</td>
+					<td>	
+						<html:password property="repassword" size="30" />
 					</td>
 				</tr>
 				<br>
@@ -63,17 +54,7 @@
 					<td>	
 						<html:text property="email" size="30" />
 					</td>
-				</tr>
-				<br>
-				<tr>
-					<td>		
-						Telefono:
-					</td>
-					<td>	
-						<html:text property="phone" size="15" />
-					</td>
-				</tr>
-				<br>		
+				</tr>		
 			</table>
 			</fieldset>	
 			<html:submit >Envia</html:submit>

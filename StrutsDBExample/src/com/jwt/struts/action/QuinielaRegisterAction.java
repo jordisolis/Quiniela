@@ -71,7 +71,7 @@ public class QuinielaRegisterAction extends Action{
 		pronostico.put(12, partido12);
 		pronostico.put(13, partido13);
 		pronostico.put(14, partido14);
-		pronostico.put(15, partido15);
+		//pronostico.put(15, partido15);
 	
 		//mapa con los posibles resultados
 		SortedMap  resultado = new TreeMap();
@@ -89,7 +89,7 @@ public class QuinielaRegisterAction extends Action{
 		resultado.put(12, "1");
 		resultado.put(13, "1");
 		resultado.put(14, "1");
-		resultado.put(15, "2");
+		//resultado.put(15, "2");
 		
 		//iteracion del ****Pronostico*****.
 		Iterator itpronostico = pronostico.entrySet().iterator();
@@ -107,16 +107,16 @@ public class QuinielaRegisterAction extends Action{
 			//si estamos en el mismo partido comprobamos si hay o no acierto.
 			
 				//guardamos en un array los pronostico de un partido (ya que puede ser un doble y tener varios).
-				String [] array = (String[]) entradapronostico.getValue();
-				if(array.length > 1){
+				String [] pronosticos = (String[]) entradapronostico.getValue();
+				if(pronosticos.length > 1){
 					posdoble++;
 				}
-				for (int i = 0; i < array.length; i++) {
-					String pronos = array[i];
+				for (int i = 0; i < pronosticos.length; i++) {
+					String pronos = pronosticos[i];
 					if(pronos.equals(entradaresultado.getValue())){
 						contador++; 
 						//parseamos el pronostico a 1 y x (para la hoja de reduciones).
-						if(array.length > 1){
+						if(pronosticos.length > 1){
 							
 							if(i==0){
 								mapadobles.put(posdoble,"1");
@@ -201,10 +201,11 @@ public class QuinielaRegisterAction extends Action{
 		Hashtable htcontador1;
 		//miramos las ocurrencia de las reduciones.
 		htcontador1=cantElementosRepLista(numerosRepetidosf1);
-		recoElementosLista(htcontador1,longList,contador);
+		ses.setAttribute("aciertos", recoElementosLista(htcontador1,longList,contador));
+//		recoElementosLista(htcontador1,longList,contador);
 
 		
-		return null;
+		return mapping.findForward("success");
 		
 		
 		}
@@ -214,20 +215,24 @@ public class QuinielaRegisterAction extends Action{
 	 
 
 	 //metodo que muestra por consola el numero de aciertos.
-	private void recoElementosLista(Hashtable htcontador1,int longList,int contador) {
-		
+	private List recoElementosLista(Hashtable htcontador1,int longList,int contador) {
+
+		List aciertos = new ArrayList();
 		Enumeration element = htcontador1.keys();
 		int numreducir = 0;
 		int contador1;
+		int key = 0;
 		while(element.hasMoreElements() ){
 			
 			Object clave = element.nextElement();		
 			numreducir = (Integer) htcontador1.get(clave);
 			contador1 = longList - numreducir;
+
+			
 			System.out.println("Has acertado en la quiniela :"+ (contador - contador1));
-	
+			aciertos.add(contador - contador1);
 		}	
-		
+		return aciertos;
 
 	}
 

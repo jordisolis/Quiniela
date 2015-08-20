@@ -10,23 +10,17 @@ import org.apache.struts.action.ActionMessage;
 public class UserRegisterForm extends ActionForm {
 
 	private static final long serialVersionUID = 1L;
-	private String firstName;
-	private String lastName;
+	private String repassword;
 	private String userName;
 	private String password;
 	private String email;
-	private String phone;
 
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
-		if (firstName == null || firstName.length() < 1) {
-			errors.add("firstName", new ActionMessage(
-					"error.firstName.required"));
-
-		}
-		if (lastName == null || lastName.length() < 1) {
-			errors.add("lastName", new ActionMessage("error.lastName.required"));
+			
+		if (repassword == null  || repassword.length() < 1) {
+			errors.add("repassword", new ActionMessage("error.repassword.required"));
 
 		}
 		if (userName == null || userName.length() < 1) {
@@ -41,10 +35,10 @@ public class UserRegisterForm extends ActionForm {
 			errors.add("email", new ActionMessage("error.email.required"));
 
 		}
-		if (phone == null || phone.length() < 1) {
-			errors.add("phone", new ActionMessage("error.phone.required"));
-
+		if(password != repassword){
+			errors.add("repassword", new ActionMessage("error.noiguales.required"));
 		}
+	
 		return errors;
 	}
 
@@ -64,21 +58,6 @@ public class UserRegisterForm extends ActionForm {
 		this.password = password;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 	public String getEmail() {
 		return email;
@@ -88,12 +67,13 @@ public class UserRegisterForm extends ActionForm {
 		this.email = email;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getRepassword() {
+		return repassword;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
+
 
 }

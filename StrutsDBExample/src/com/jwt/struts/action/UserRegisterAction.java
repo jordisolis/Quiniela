@@ -24,21 +24,18 @@ public class UserRegisterAction extends Action {
 		HttpSession ses = request.getSession(true);
 
 		UserRegisterForm registerForm = (UserRegisterForm) form;
-		String firstName = registerForm.getFirstName();
-		String lastName = registerForm.getLastName();
+		String repassword = registerForm.getRepassword();
 		String userName = registerForm.getUserName();
 		String password = registerForm.getPassword();
 		String email = registerForm.getEmail();
-		String phone = registerForm.getPhone();
 		UserRegisterDAO dao = new UserRegisterDAO();
-		dao.insertData(firstName, lastName, userName, password, email, phone);
-		ses.setAttribute("firstName", firstName);
-		ses.setAttribute("lastName", lastName);
+		dao.insertData( userName, password, email);
+	
 		ses.setAttribute("userName", userName);
 		ses.setAttribute("email", email);
-		ses.setAttribute("phone", phone);
-		if (firstName.equals("") || lastName.equals("") || userName.equals("")
-				|| password.equals("") || email.equals("") || phone.equals("")) {
+		ses.setAttribute("password", password);
+		if (userName.equals("")
+				|| password.equals("") || email.equals("") || repassword.equals("")) {
 			return mapping.findForward("error");
 		}
 		return mapping.findForward("success");
