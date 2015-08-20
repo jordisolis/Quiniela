@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+	<form-beans>
+		<form-bean name="registerForm" type="com.jwt.struts.form.UserRegisterForm" />
+		<form-bean name="LoginForm" type="com.jwt.struts.form.LoginForm"/>
+		<form-bean name="quinielaRegisterForm" type="com.jwt.struts.form.QuinielaRegisterForm" />
+	</form-beans>
+
+	<action-mappings>
+	
+		<action input="/index.jsp"
+				name="registerForm"
+				path="/Index"
+				scope="session"
+				parameter="metodo" 
+			 	type="com.jwt.struts.action.IndexAction"
+			 	validate="false">
+			 	
+			<forward name="login" path="/login.jsp" />
+			<forward name="registro" path="/registro.jsp" />
+			<forward name="quiniela" path="/regisquiniela.jsp" />
+		</action>
+		<action input="/regisquiniela.jsp"
+				name="quinielaRegisterForm"
+				path="/Quiniela" 
+				scope="session"
+				type="com.jwt.struts.action.QuinielaRegisterAction">
+			<forward name="success" path="/success.jsp" />
+			<forward name="failure" path="/failure.jsp" />
+		</action>
+		<action input="/registro.jsp"
+				name="registerForm"
+				path="/Registro" 
+				scope="session"
+				type="com.jwt.struts.action.UserRegisterAction">
+			<forward name="success" path="/success.jsp" />
+			<forward name="failure" path="/failure.jsp" />
+		</action>
+		
+		<action input="/login.jsp"
+		 		name="LoginForm"
+		 		path="/Login"
+		 		scope="session"
+		 		type="com.jwt.struts.action.LoginAction">
+            <forward name="success" path="/success.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+	</action-mappings>
+
+	<message-resources parameter="com/jwt/struts/action/ApplicationResource" />
+
+</struts-config>
