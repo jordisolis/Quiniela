@@ -201,9 +201,15 @@ public class QuinielaRegisterAction extends Action{
 		Hashtable htcontador1;
 		//miramos las ocurrencia de las reduciones.
 		htcontador1=cantElementosRepLista(numerosRepetidosf1);
-		ses.setAttribute("aciertos", recoElementosLista(htcontador1,longList,contador));
-//		recoElementosLista(htcontador1,longList,contador);
+		List listaAciertos = recoElementosLista(htcontador1,longList,contador);
+		
+		Hashtable htcontadoraciertos;
+		htcontadoraciertos=cantElementosRepLista(listaAciertos);
 
+		
+		ses.setAttribute("aciertos", htcontadoraciertos);
+
+		
 		
 		return mapping.findForward("success");
 		
@@ -214,7 +220,12 @@ public class QuinielaRegisterAction extends Action{
 	
 	 
 
-	 //metodo que muestra por consola el numero de aciertos.
+
+
+
+
+
+	//metodo que muestra por consola el numero de aciertos.
 	private List recoElementosLista(Hashtable htcontador1,int longList,int contador) {
 
 		List aciertos = new ArrayList();
