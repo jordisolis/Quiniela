@@ -55,7 +55,7 @@ public class QuinielaRegisterAction extends Action{
 		String []  partido12 = quiniRegisForm.getPartido12();
 		String []  partido13 = quiniRegisForm.getPartido13();
 		String []  partido14 = quiniRegisForm.getPartido14();
-		String []  partido15 = quiniRegisForm.getPartido15();
+//		String []  partido15 = quiniRegisForm.getPartido15();
 		//pasamos al hasmap los resultados.
 		pronostico.put(1, partido1);
 		pronostico.put(2, partido2);

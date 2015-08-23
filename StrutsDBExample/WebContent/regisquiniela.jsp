@@ -12,6 +12,10 @@
 			<div style="color:red">
     			<html:errors />
     		</div>
+    		
+    		<%-- <html:checkbox  property="partido1"  value="1"> </html:checkbox>
+    		<html:checkbox  property="partido1"  value="1"> </html:checkbox> --%>
+    		
 <html:form action="/Quiniela" method="get">
  
 					<table class="tabla-quini clasi-grup tabla-quiniela" >
@@ -538,16 +542,16 @@
 									</tr>
 									<tr>
 										<td>
-											<html:checkbox  property="partido15"  value="0"> </html:checkbox>
+											<html:checkbox  property="partido15L"  value="0"> </html:checkbox>
 										</td>
 										<td>	
-                                			<html:checkbox  property="partido15"  value="1"></html:checkbox>
+                                			<html:checkbox  property="partido15L"  value="1"></html:checkbox>
                                 		</td>
                                 		<td>
-                                			<html:checkbox  property="partido15"  value="2"></html:checkbox>
+                                			<html:checkbox  property="partido15L"  value="2"></html:checkbox>
                                 		</td>
                                 		<td>	
-                                			<html:checkbox  property="partido15"  value="M"></html:checkbox>
+                                			<html:checkbox  property="partido15L"  value="M"></html:checkbox>
                                 		</td>	  
 										
 									</tr>	
@@ -580,16 +584,16 @@
 									</tr>
 									<tr>
 										<td>
-											<html:checkbox  property="partido15"  value="0"></html:checkbox>
+											<html:checkbox  property="partido15V"  value="0"></html:checkbox>
 										</td>
 										<td>	
-                                			<html:checkbox  property="partido15"  value="1"></html:checkbox>
+                                			<html:checkbox  property="partido15V"  value="1"></html:checkbox>
                                 		</td>
                                 		<td>
-                                			<html:checkbox  property="partido15"  value="2"></html:checkbox>
+                                			<html:checkbox  property="partido15V"  value="2"></html:checkbox>
                                 		</td>
                                 		<td>	
-                                			<html:checkbox  property="partido15"  value="M"></html:checkbox>
+                                			<html:checkbox  property="partido15V"  value="M"></html:checkbox>
                                 		</td>	  
 										
 									</tr>	

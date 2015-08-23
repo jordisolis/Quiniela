@@ -34,78 +34,202 @@ public class QuinielaRegisterForm extends ActionForm{
 	private String [] partido12;
 	private String [] partido13;
 	private String [] partido14;
-	private String [] partido15;
+	private String partido15L;
+	private String partido15V;
 	private int Aciertos;
-	
+	private String doblesmas;
+	private String doblesmenos;
 	
 	
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
-		if (partido1 == null || partido1.length < 1) {
-			errors.add("partido1", new ActionMessage(
-					"error.firstName.required"));
-
-		}
-		if (partido2 == null || partido2.length < 1) {
-			errors.add("partido2", new ActionMessage("error.lastName.required"));
-
-		}
-		if (partido3 == null || partido3.length < 1) {
-			errors.add("partido3", new ActionMessage("error.userName.required"));
-
-		}
-		if (partido4 == null || partido4.length < 1) {
-			errors.add("partido4", new ActionMessage("error.password.required"));
-
-		}
-		if (partido5 == null || partido5.length < 1) {
-			errors.add("partido5", new ActionMessage("error.email.required"));
-
-		}
-		if (partido6 == null || partido6.length < 1) {
-			errors.add("partido6", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido7 == null || partido7.length < 1) {
-			errors.add("partido7", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido8 == null || partido8.length < 1) {
-			errors.add("partido8", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido9 == null || partido9.length < 1) {
-			errors.add("partido9", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido10 == null || partido10.length < 1) {
-			errors.add("partido10", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido11 == null || partido11.length < 1) {
-			errors.add("partido11", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido12 == null || partido12.length < 1) {
-			errors.add("partido12", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido13 == null || partido13.length < 1) {
-			errors.add("partido13", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido14 == null || partido14.length < 1) {
-			errors.add("partido14", new ActionMessage("error.phone.required"));
-
-		}
-		if (partido15 == null || partido15.length < 1) {
-			errors.add("partido15", new ActionMessage("error.phone.required"));
-
+	
+		//validamos que siempre se meta un resultado.
+		ErrorSiVacio(errors);
+		if(errors.size() < 1){
+			ErrorSiMasSieteDobles(errors);
 		}
 		return errors;
 	}
+
+	private void ErrorSiMasSieteDobles(ActionErrors errors){
+		
+		int contador = 0;
+		contador = contadordobles (partido1,contador);
+		contador = contadordobles (partido2,contador);
+		contador = contadordobles (partido3,contador);
+		contador = contadordobles (partido4,contador);
+		contador = contadordobles (partido5,contador);
+		contador = contadordobles (partido6,contador);
+		contador = contadordobles (partido7,contador);
+		contador = contadordobles (partido8,contador);
+		contador = contadordobles (partido9,contador);
+		contador = contadordobles (partido10,contador);
+		contador = contadordobles (partido11,contador);
+		contador = contadordobles (partido12,contador);
+		contador = contadordobles (partido13,contador);
+		contador = contadordobles (partido14,contador);
+		
+			
+		if (contador > 7){
+			errors.add("doblesmas", new ActionMessage("error.doblesmas.required"));
+		}
+		else if(contador < 7){
+			errors.add("doblesmenos", new ActionMessage("error.doblesmenos.required"));
+		}
+		
+	}
 	
+   //contador de dobles.
+	private int contadordobles(String [] partidos,int contador){
+		
+		
+		if(partidos.length > 1){
+			contador ++;
+		}
+	
+		
+		return contador;
+		
+		
+	}
+	//Errores si no se seliona nada en alguna fila.
+	private void ErrorSiVacio(ActionErrors errors) {
+		if (partido1 == null || partido1.length < 1) {
+			errors.add("partido1", new ActionMessage(
+					"error.partido1.required"));
+
+		}
+		if (partido2 == null || partido2.length < 1) {
+			errors.add("partido2", new ActionMessage("error.partido2.required"));
+
+		}
+		if (partido3 == null || partido3.length < 1) {
+			errors.add("partido3", new ActionMessage("error.partido3.required"));
+
+		}
+		if (partido4 == null || partido4.length < 1) {
+			errors.add("partido4", new ActionMessage("error.partido4.required"));
+
+		}
+		if (partido5 == null || partido5.length < 1) {
+			errors.add("partido5", new ActionMessage("error.partido5.required"));
+
+		}
+		if (partido6 == null || partido6.length < 1) {
+			errors.add("partido6", new ActionMessage("error.partido6.required"));
+
+		}
+		if (partido7 == null || partido7.length < 1) {
+			errors.add("partido7", new ActionMessage("error.partido7.required"));
+
+		}
+		if (partido8 == null || partido8.length < 1) {
+			errors.add("partido8", new ActionMessage("error.partido8.required"));
+
+		}
+		if (partido9 == null || partido9.length < 1) {
+			errors.add("partido9", new ActionMessage("error.partido9.required"));
+
+		}
+		if (partido10 == null || partido10.length < 1) {
+			errors.add("partido10", new ActionMessage("error.partido10.required"));
+
+		}
+		if (partido11 == null || partido11.length < 1) {
+			errors.add("partido11", new ActionMessage("error.partido11.required"));
+
+		}
+		if (partido12 == null || partido12.length < 1) {
+			errors.add("partido12", new ActionMessage("error.partido12.required"));
+
+		}
+		if (partido13 == null || partido13.length < 1) {
+			errors.add("partido13", new ActionMessage("error.partido13.required"));
+
+		}
+		if (partido14 == null || partido14.length < 1) {
+			errors.add("partido14", new ActionMessage("error.partido14.required"));
+
+		}
+		if (partido15L == null && partido15V.length() < 1) {
+			errors.add("partido15", new ActionMessage("error.partido15.required"));
+
+		}
+		
+	}
+	
+	//Errores si no se seliona nada en alguna fila.
+		private void ErrorTriple(ActionErrors errors) {
+			if (partido1.length > 2) {
+				errors.add("partido1", new ActionMessage(
+						"error.partido1.triple"));
+
+			}
+			if (partido2.length > 2) {
+				errors.add("partido2", new ActionMessage("error.partido2.triple"));
+
+			}
+			if (partido3.length > 2) {
+				errors.add("partido3", new ActionMessage("error.partido3.triple"));
+
+			}
+			if (partido4.length > 2) {
+				errors.add("partido4", new ActionMessage("error.partido4.triple"));
+
+			}
+			if (partido5.length > 2) {
+				errors.add("partido5", new ActionMessage("error.partido5.triple"));
+
+			}
+			if (partido6.length > 2) {
+				errors.add("partido6", new ActionMessage("error.partido6.triple"));
+
+			}
+			if (partido7.length > 2) {
+				errors.add("partido7", new ActionMessage("error.partido7.triple"));
+
+			}
+			if (partido8.length > 2) {
+				errors.add("partido8", new ActionMessage("error.partido8.triple"));
+
+			}
+			if (partido9.length < 2) {
+				errors.add("partido9", new ActionMessage("error.partido9.triple"));
+
+			}
+			if (partido10.length < 2) {
+				errors.add("partido10", new ActionMessage("error.partido10.triple"));
+
+			}
+			if (partido11.length < 2) {
+				errors.add("partido11", new ActionMessage("error.partido11.required"));
+
+			}
+			if (partido12.length < 2) {
+				errors.add("partido12", new ActionMessage("error.partido12.required"));
+
+			}
+			if (partido13.length < 2) {
+				errors.add("partido13", new ActionMessage("error.partido13.required"));
+
+			}
+			if (partido14.length < 2) {
+				errors.add("partido14", new ActionMessage("error.partido14.required"));
+
+			}
+			if (partido15V.length() < 2) {
+				errors.add("partido15", new ActionMessage("error.partido15.required"));
+
+			}
+			if (partido15L.length() > 1){
+				errors.add("partido15Lmas", new ActionMessage("error.partido15Lmas.required"));
+			}
+			if (partido15V.length() > 1){
+				errors.add("partido15Vmas", new ActionMessage("error.partido15Vmas.required"));
+			}
+		}
 	
 	
 	public String[] getPartido2() {
@@ -212,13 +336,7 @@ public class QuinielaRegisterForm extends ActionForm{
 		this.partido14 = partido14;
 	}
 
-	public String[] getPartido15() {
-		return partido15;
-	}
 
-	public void setPartido15(String[] partido15) {
-		this.partido15 = partido15;
-	}
 
 	public QuinielaRegisterForm () {
 		
@@ -252,6 +370,39 @@ public class QuinielaRegisterForm extends ActionForm{
 
 	public void setFilas(String filas) {
 		this.filas = filas;
+	}
+
+	public String getDoblesmas() {
+		return doblesmas;
+	}
+
+	public void setDoblesmas(String doblesmas) {
+		this.doblesmas = doblesmas;
+	}
+
+
+	public String getDoblesmenos() {
+		return doblesmenos;
+	}
+
+	public void setDoblesmenos(String doblesmenos) {
+		this.doblesmenos = doblesmenos;
+	}
+
+	public String getPartido15L() {
+		return partido15L;
+	}
+
+	public void setPartido15L(String partido15l) {
+		partido15L = partido15l;
+	}
+
+	public String getPartido15V() {
+		return partido15V;
+	}
+
+	public void setPartido15V(String partido15v) {
+		partido15V = partido15v;
 	}
 
 
