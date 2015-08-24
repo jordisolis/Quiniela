@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+#dialog-loading {
+    display:none;
+}
+#dialog-loading img {
+    margin-right: 10px;
+}

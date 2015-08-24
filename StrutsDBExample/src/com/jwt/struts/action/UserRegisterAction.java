@@ -38,7 +38,7 @@ public class UserRegisterAction extends Action {
 				|| password.equals("") || email.equals("") || repassword.equals("")) {
 			return mapping.findForward("error");
 		}
-		return mapping.findForward("success");
+		return mapping.findForward("login");
 
 	}
 }

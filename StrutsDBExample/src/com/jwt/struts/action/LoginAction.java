@@ -20,7 +20,7 @@ import com.jwt.struts.form.LoginForm;
 public class LoginAction extends Action {
 
     /* forward name="success" path="" */
-    private final static String SUCCESS = "success";
+    private final static String Init = "Inicio";
     private final static String FAILURE = "failure";
     /**
      * This is the action called from the Struts framework.
@@ -36,7 +36,7 @@ public class LoginAction extends Action {
             throws Exception {
         LoginForm loginForm = (LoginForm) form;
         if (loginForm.getUserName().equals(loginForm.getPassword())) {
-            return mapping.findForward(SUCCESS);
+            return mapping.findForward(Init);
         } else {
             return mapping.findForward(FAILURE);
         }

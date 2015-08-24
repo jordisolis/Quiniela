@@ -1,0 +1,28 @@
+/**
+ * creado por Jordisolis.
+ */
+function mostrarAlertaCargando(textDialog) {
+	if( textDialog == undefined || textDialog == null || textDialog == "") {
+		textDialog = textos.defaultDialogEnviandoPeticion;
+	}
+
+	$("#contenido-image-loading").html("<img alt='' src='/recursos/img/loading.gif' height='30' width='30'/>");
+	
+	$("#contenido-dialog-loading").html(textDialog);
+    var opciones = {
+            bgiframe: true,
+            modal: true,
+            draggable: false,
+            resizable: false,
+            closeOnEscape: false,
+            height:150,
+            open: function(event, ui) {$(".ui-dialog-titlebar-close", $(this).parent()).hide();}
+    };
+    
+    
+    $("#dialog-loading").dialog(opciones);
+}
+
+function ocultarAlertaCargando() {
+	$("#dialog-loading").dialog("close");
+}

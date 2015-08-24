@@ -26,20 +26,35 @@
 			<forward name="registro" path="/registro.jsp" />
 			<forward name="quiniela" path="/regisquiniela.jsp" />
 		</action>
+		<action input="/Inicio.jsp"
+				name="quinielaRegisterForm"
+				path="/Inicio"
+				scope="session"
+				parameter="metodo" 
+			 	type="com.jwt.struts.action.InicioAction"
+			 	validate="false">
+	
+			<forward name="quiniela" path="/regisquiniela.jsp" />
+			<forward name="estadisticas" path="/estadisticas.jsp" />
+			<forward name="comprobar" path="/comprobacion.jsp" />
+		</action>
 		<action input="/regisquiniela.jsp"
 				name="quinielaRegisterForm"
 				path="/Quiniela" 
 				scope="session"
 				type="com.jwt.struts.action.QuinielaRegisterAction">
+				
+			<forward name="Inicio" path="/Inicio.jsp" />
 			<forward name="success" path="/success.jsp" />
 			<forward name="failregisquiniela" path="/regisquiniela.jsp" />
 		</action>
+		
 		<action input="/registro.jsp"
 				name="registerForm"
 				path="/Registro" 
 				scope="session"
 				type="com.jwt.struts.action.UserRegisterAction">
-			<forward name="success" path="/success.jsp" />
+			<forward name="login" path="/login.jsp" />
 			<forward name="failure" path="/failure.jsp" />
 		</action>
 		
@@ -48,9 +63,10 @@
 		 		path="/Login"
 		 		scope="session"
 		 		type="com.jwt.struts.action.LoginAction">
-            <forward name="success" path="/success.jsp" />
+            <forward name="Inicio" path="/Inicio.jsp" />
             <forward name="failure" path="/failure.jsp" />
         </action>
+        
 	</action-mappings>
 
 	<message-resources parameter="com/jwt/struts/action/ApplicationResource" />
