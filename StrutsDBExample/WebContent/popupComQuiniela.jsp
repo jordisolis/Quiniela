@@ -70,22 +70,23 @@
 
       /*   var URL = '<html:rewrite action="Quiniela.html?operation=showPopup&ajax=true"/>'; */
         
-    /*     mostrarAlertaCargando("Cargando....");   */
+        setTimeout(mostrarAlertaCargando("Cargando...."), 3000);  
         showPopup();
-       /*  ajaxFormWithOutCargando("#quinielaRegisterForm", URL, function(callback) {
+       /*   ajaxFormWithOutCargando("#quinielaRegisterForm", URL, function(callback) {
             if(!showErrorOrMessage(callback,null)) {
                 showPopup(callback.resultados);
             }
-        }); */
+        });  */
+        ocultarAlertaCargando();
     }
     
     function showPopup(){ 
                         
     	<%-- Habilitamos el popup --%>
-     /*    var botones = {};
+      /*   var botones = {};
         botones[textos.aceptar] = function() {
             $(this).dialog("close");
-        }; */
+        };  */
         var opciones = {
                 bgiframe: true,
                 modal: true,
@@ -94,7 +95,7 @@
                 resizable: false,
             /*     buttons: botones, */
                 minHeight: 'auto',
-               /*  height: altoDialogos, */
+                height: 50, 
                 width: 920
         };
         

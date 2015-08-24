@@ -35,7 +35,7 @@ public class UserRegisterForm extends ActionForm {
 			errors.add("email", new ActionMessage("error.email.required"));
 
 		}
-		if(password != repassword){
+		if(!password.equals(repassword)){
 			errors.add("repassword", new ActionMessage("error.noiguales.required"));
 		}
 	

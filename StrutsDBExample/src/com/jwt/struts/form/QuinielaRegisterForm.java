@@ -78,6 +78,9 @@ public class QuinielaRegisterForm extends ActionForm{
 		else if(contador < 7){
 			errors.add("doblesmenos", new ActionMessage("error.doblesmenos.required"));
 		}
+		if (contador !=7){
+			errors.add("doblesko", new ActionMessage("error.doblesko.required"));
+		}
 		
 	}
 	

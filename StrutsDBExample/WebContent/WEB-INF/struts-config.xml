@@ -55,6 +55,7 @@
 				scope="session"
 				type="com.jwt.struts.action.UserRegisterAction">
 			<forward name="login" path="/login.jsp" />
+			<forward name="popup" path="/Popup.html" />
 			<forward name="failure" path="/failure.jsp" />
 		</action>
 		

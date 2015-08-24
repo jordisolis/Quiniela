@@ -7,6 +7,27 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="stylesheet" type="text/css" media="all" href="recursos/css/login.css"  />
 	<title>Registro</title>
+	<script type="text/javascript"  src="recursos/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript">
+	 $(document).ready(function() {
+		  
+		   $("#boton-registro").click(submitRegister);
+	        
+	  });
+	 
+	function submitRegister(){
+		
+		var r = confirm("¿Estas seguro qu quieres registrarte?");
+		if (r == true) {
+		  
+		    document.forms[0].submit();
+		} 
+		
+		
+	}
+
+		</script>
+	
 </head>
 <body bgcolor="silver">
 	<br></br>
@@ -57,8 +78,8 @@
 				</tr>		
 			</table>
 			</fieldset>	
-			<html:submit >Envia</html:submit>
-			<input class="botoncontacto" type="submit" name="submitButtonName" value="">
+			<%-- <html:submit >Envia</html:submit> --%>
+			<input class="botoncontacto" id="boton-registro" type="submit" name="submitButtonName" value="">
 			<br><br>
 		</html:form>
 	</html:html>

@@ -8,6 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionForward;
 
+import com.jwt.struts.dao.LoginDAO;
 import com.jwt.struts.form.LoginForm;
 
 
@@ -35,10 +36,21 @@ public class LoginAction extends Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         LoginForm loginForm = (LoginForm) form;
-        if (loginForm.getUserName().equals(loginForm.getPassword())) {
-            return mapping.findForward(Init);
-        } else {
-            return mapping.findForward(FAILURE);
+        
+        LoginDAO login = new LoginDAO();
+        if(login.login(loginForm.getUserName(), loginForm.getPassword())){
+        	return mapping.findForward(Init);
         }
+        else{
+        	return mapping.findForward(FAILURE);
+        }
+        
+        
+        
+//        if (loginForm.getUserName().equals(loginForm.getPassword())) {
+//            return mapping.findForward(Init);
+//        } else {
+//            return mapping.findForward(FAILURE);
+//        }
     }
 }

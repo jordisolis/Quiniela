@@ -10,6 +10,8 @@
 <script type="text/javascript"  src="recursos/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery.bgiframe.min.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery.form.js"></script>
+<script type="text/javascript"  src="recursos/js/ajax.js"></script>
+<script type="text/javascript"  src="recursos/js/jquery.form.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery-ui-1.8.9.custom.min.js"></script>
 <script type="text/javascript"  src="recursos/js/comun.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<%=request.getContextPath()%>/recursos/css/comun.css"/>

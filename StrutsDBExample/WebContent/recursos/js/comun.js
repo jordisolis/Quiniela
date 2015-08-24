@@ -6,7 +6,7 @@ function mostrarAlertaCargando(textDialog) {
 		textDialog = textos.defaultDialogEnviandoPeticion;
 	}
 
-	$("#contenido-image-loading").html("<img alt='' src='/recursos/img/loading.gif' height='30' width='30'/>");
+	$("#contenido-image-loading").html("<img alt='' src='recursos/img/loading.gif' height='30' width='30'/>");
 	
 	$("#contenido-dialog-loading").html(textDialog);
     var opciones = {
