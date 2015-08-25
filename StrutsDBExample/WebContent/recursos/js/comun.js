@@ -26,3 +26,15 @@ function mostrarAlertaCargando(textDialog) {
 function ocultarAlertaCargando() {
 	$("#dialog-loading").dialog("close");
 }
+
+function alertaError(texto, funcion) {
+    _alerta("dialog-error", textos.error, texto, funcion);
+}
+
+function alertaInfo(texto, funcion) {
+    _alerta("dialog-info", textos.informacion, texto, funcion);
+}
+
+function alerta(texto, funcion) {
+    _alerta("dialog-modal", "", texto, funcion);
+}

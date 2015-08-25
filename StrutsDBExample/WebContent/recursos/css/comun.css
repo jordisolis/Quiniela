@@ -1,8 +1,116 @@
 @CHARSET "ISO-8859-1";
 
+#dialog-modal {
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+
+#dialog-error {
+    background-repeat:no-repeat;
+    background-position: 5px 5px;
+    background-image:url(../img/ico_msg_alert.png);
+    padding: 10px 10px 20px 50px;
+}
+#dialog-confirm {
+    background-repeat:no-repeat;
+    background-position: 5px 5px;
+    background-image:url(../img/ico_help.png);
+    padding: 10px 10px 20px 50px;
+}
+#dialog-info {
+    background-repeat:no-repeat;
+    background-image:url(../img/ico_msg_ok.png);
+    background-position: 5px 5px;
+    padding: 10px 10px 20px 50px;
+}
+
 #dialog-loading {
     display:none;
 }
 #dialog-loading img {
     margin-right: 10px;
+}
+.capaConBorde {
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 2px;
+    position: relative;
+}
+
+.capaConBordeFlotante {
+	border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 5px;
+}
+
+.capaBotonera {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+}
+.conBorde{
+    border: solid 1px #007599;
+}
+.conBorde[disabled="disabled"] {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.conBordeDisabled{
+    border: solid 1px #ddd;
+}
+.conBordeReadonly {
+    border: 1px solid #f5f5f5;
+    color: #888;
+}
+
+.conBordeError{
+    border: solid 1px red;
+}
+.boton{
+    background-image: url('../img/fondo_boton.gif');
+    background-position: top left;
+    background-repeat: repeat-x;
+    cursor: pointer;
+    height: 22px;
+    border-width: 0px;
+    padding: 0px 5px;
+    margin-right: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.boton:hover {
+    background-image: url('../img/fondo_boton_on.gif');
+    text-decoration: none;
+}
+
+a.boton {
+    display: inline-block;
+    #display: inline-block;
+    _display: inline;
+    zoom: 1;
+    margin-bottom:0px;
+    vertical-align: top;
+    padding-top:4px;
+    font-size:11px;
+}
+
+.titulo{
+    font-size: 14px;
+    color: #007599;
+}
+
+.primerItemCombo {
+    background-color: #eeeeee;
+}
+
+.combo{
+    font-size: 11px;
+    color: #505050;
+}
+
+.literal{
+    font-size: 11px;
+    color: #555555;
 }

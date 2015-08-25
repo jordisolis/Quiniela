@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Página de inicio.</title>
+<link rel="stylesheet" type="text/css" media="all" href="recursos/css/comun.css"  />
+<link rel="stylesheet" type="text/css" media="all" href="recursos/css/jquery-ui-1.8.9.custom.css"  />
 <script type="text/javascript"  src="recursos/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery.bgiframe.min.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery.form.js"></script>
@@ -44,7 +46,7 @@
 				
 			<%}%>
 
-
+        <jsp:include page="manejarErrores.jsp" />
 
 </html:form>
     <div id="dialog-loading" title="enviando" style="display:none;">

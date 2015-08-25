@@ -70,32 +70,32 @@
 
       /*   var URL = '<html:rewrite action="Quiniela.html?operation=showPopup&ajax=true"/>'; */
         
-        setTimeout(mostrarAlertaCargando("Cargando...."), 3000);  
+       mostrarAlertaCargando("Cargando....");
         showPopup();
        /*   ajaxFormWithOutCargando("#quinielaRegisterForm", URL, function(callback) {
             if(!showErrorOrMessage(callback,null)) {
                 showPopup(callback.resultados);
             }
         });  */
-        ocultarAlertaCargando();
+       ocultarAlertaCargando();
     }
     
     function showPopup(){ 
                         
     	<%-- Habilitamos el popup --%>
-      /*   var botones = {};
+        var botones = {};
         botones[textos.aceptar] = function() {
             $(this).dialog("close");
-        };  */
+        };
         var opciones = {
                 bgiframe: true,
                 modal: true,
                 title: "Quinielas acertadas",
                 draggable: true,
                 resizable: false,
-            /*     buttons: botones, */
+                buttons: botones,
                 minHeight: 'auto',
-                height: 50, 
+                height: 250, 
                 width: 920
         };
         
