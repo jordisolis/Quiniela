@@ -7,69 +7,71 @@
 
 <struts-config>
 	<form-beans>
-		<form-bean name="registerForm" type="com.jwt.struts.form.UserRegisterForm" />
-		<form-bean name="LoginForm" type="com.jwt.struts.form.LoginForm"/>
-		<form-bean name="quinielaRegisterForm" type="com.jwt.struts.form.QuinielaRegisterForm" />
+		<form-bean name="registerForm" type="com.jsr.struts.form.UserRegisterForm" />
+		<form-bean name="LoginForm" type="com.jsr.struts.form.LoginForm"/>
+		<form-bean name="quinielaRegisterForm" type="com.jsr.struts.form.QuinielaRegisterForm" />
 	</form-beans>
 
 	<action-mappings>
-	
+		<!--PAGINA INDEX, PRINCIPAL  -->
 		<action input="/index.jsp"
 				name="registerForm"
 				path="/Index"
 				scope="session"
 				parameter="metodo" 
-			 	type="com.jwt.struts.action.IndexAction"
+			 	type="com.jsr.struts.action.IndexAction"
 			 	validate="false">
 			 	
-			<forward name="login" path="/login.jsp" />
-			<forward name="registro" path="/registro.jsp" />
-			<forward name="quiniela" path="/regisquiniela.jsp" />
+			<forward name="login" path="/jsp/login/login.jsp" />
+			<forward name="registro" path="/jsp/registrousuario/registro.jsp" />
+			<forward name="quiniela" path="/jsp/registroquiniela/regisquiniela.jsp" />
 		</action>
+		<!--PAGINA INICIO  -->
 		<action input="/Inicio.jsp"
 				name="quinielaRegisterForm"
 				path="/Inicio"
 				scope="session"
 				parameter="metodo" 
-			 	type="com.jwt.struts.action.InicioAction"
+			 	type="com.jsr.struts.action.InicioAction"
 			 	validate="false">
 	
-			<forward name="quiniela" path="/regisquiniela.jsp" />
-			<forward name="estadisticas" path="/estadisticas.jsp" />
-			<forward name="comprobar" path="/comprobacion.jsp" />
+			<forward name="quiniela" path="/jsp/registroquiniela/regisquiniela.jsp" />
+			<forward name="estadisticas" path="/jsp/estadisticas/estadisticas.jsp" />
+			<forward name="comprobar" path="/jsp/comprobacion/comprobacion.jsp" />
 		</action>
-		<action input="/regisquiniela.jsp"
+		<!--PAGINA REGISTROQUINIELA  -->
+		<action input="/jsp/registroquiniela/regisquiniela.jsp"
 				name="quinielaRegisterForm"
 				path="/Quiniela" 
 				scope="session"
-				type="com.jwt.struts.action.QuinielaRegisterAction">
+				type="com.jsr.struts.action.QuinielaRegisterAction">
 				
 			<forward name="Inicio" path="/Inicio.jsp" />
 			<forward name="success" path="/success.jsp" />
-			<forward name="failregisquiniela" path="/regisquiniela.jsp" />
+			<forward name="failregisquiniela" path="/jsp/registroquiniela/regisquiniela.jsp" />
 		</action>
-		
-		<action input="/registro.jsp"
+		<!--PAGINA REGISTRO USUARIO -->
+		<action input="/jsp/registrousuario/registro.jsp"
 				name="registerForm"
 				path="/Registro" 
 				scope="session"
-				type="com.jwt.struts.action.UserRegisterAction">
-			<forward name="login" path="/login.jsp" />
+				type="com.jsr.struts.action.UserRegisterAction">
+			<forward name="login" path="/jsp/login/login.jsp" />
 			<forward name="popup" path="/Popup.html" />
 			<forward name="failure" path="/failure.jsp" />
 		</action>
-		
-		<action input="/login.jsp"
+		<!--PAGINA DE LOGIN  -->
+		<action input="/jsp/login/login.jsp"
 		 		name="LoginForm"
 		 		path="/Login"
 		 		scope="session"
-		 		type="com.jwt.struts.action.LoginAction">
+		 		type="com.jsr.struts.action.LoginAction">
             <forward name="Inicio" path="/Inicio.jsp" />
             <forward name="failure" path="/failure.jsp" />
         </action>
         
 	</action-mappings>
 
-	<message-resources parameter="com/jwt/struts/action/ApplicationResource" />
+	<message-resources parameter="com/jsr/struts/action/ApplicationResource" />
 
 </struts-config>
