@@ -1,7 +1,11 @@
 
 package com.jsr.struts.action;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
@@ -9,6 +13,7 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionForward;
 
 import com.jsr.struts.dao.LoginDAO;
+import com.jsr.struts.form.ColumnaQuinielaForm;
 import com.jsr.struts.form.LoginForm;
 
 
@@ -37,20 +42,24 @@ public class LoginAction extends Action {
             throws Exception {
         LoginForm loginForm = (LoginForm) form;
         
-        LoginDAO login = new LoginDAO();
-        if(login.login(loginForm.getUserName(), loginForm.getPassword())){
-        	return mapping.findForward(Init);
-        }
-        else{
-        	return mapping.findForward(FAILURE);
-        }
-        
-        
-        
-//        if (loginForm.getUserName().equals(loginForm.getPassword())) {
-//            return mapping.findForward(Init);
-//        } else {
-//            return mapping.findForward(FAILURE);
+//        LoginDAO login = new LoginDAO();
+//        if(login.login(loginForm.getUserName(), loginForm.getPassword())){
+//        	return mapping.findForward(Init);
 //        }
+//        else{
+//        	return mapping.findForward(FAILURE);
+//        }
+
+        if (loginForm.getUserName().equals(loginForm.getPassword())) {
+            
+        	
+//        	ses.setAttribute("pintarquini", columna);
+        	return mapping.findForward(Init);
+            
+            
+            
+        } else {
+            return mapping.findForward(FAILURE);
+        }
     }
 }

@@ -1,5 +1,7 @@
 
 package com.jsr.struts.form;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionErrors;
@@ -21,6 +23,7 @@ public class LoginForm extends org.apache.struts.action.ActionForm {
 
     private String password;
 
+    private List<ColumnaQuinielaForm> columnaQuini;
     
     /**
      *
@@ -76,4 +79,18 @@ public class LoginForm extends org.apache.struts.action.ActionForm {
     public void setPassword(String password) {
         this.password = password;
     }
+
+	/**
+	 * @return the columnaQuini
+	 */
+	public List getColumnaQuini() {
+		return columnaQuini;
+	}
+
+	/**
+	 * @param columnaQuini the columnaQuini to set
+	 */
+	public void setColumnaQuini(List columnaQuini) {
+		this.columnaQuini = columnaQuini;
+	}
 }

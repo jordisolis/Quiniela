@@ -1,3 +1,7 @@
+<%@page import="com.jsr.struts.form.ColumnaQuinielaForm"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="/struts-html" prefix="html" %>
@@ -13,8 +17,26 @@
     			<html:errors />
     		</div>
     		
-    		<%-- <html:checkbox  property="partido1"  value="1"> </html:checkbox>
-    		<html:checkbox  property="partido1"  value="1"> </html:checkbox> --%>
+    <%
+		List columnas = new ArrayList();
+		columnas =  (List) session.getAttribute("pintarquini") ;
+		ColumnaQuinielaForm columna1 = (ColumnaQuinielaForm) columnas.get(0);
+		ColumnaQuinielaForm columna2 = (ColumnaQuinielaForm) columnas.get(1);
+		ColumnaQuinielaForm columna3 = (ColumnaQuinielaForm) columnas.get(2);
+		ColumnaQuinielaForm columna4 = (ColumnaQuinielaForm) columnas.get(3);
+		ColumnaQuinielaForm columna5 = (ColumnaQuinielaForm) columnas.get(4);
+/* 		ColumnaQuinielaForm columna6 = (ColumnaQuinielaForm) columnas.get(5);
+		ColumnaQuinielaForm columna7 = (ColumnaQuinielaForm) columnas.get(6);
+		ColumnaQuinielaForm columna8 = (ColumnaQuinielaForm) columnas.get(7);
+		ColumnaQuinielaForm columna9 = (ColumnaQuinielaForm) columnas.get(8);
+		ColumnaQuinielaForm columna10 = (ColumnaQuinielaForm) columnas.get(9);
+		ColumnaQuinielaForm columna11 = (ColumnaQuinielaForm) columnas.get(10);
+		ColumnaQuinielaForm columna12 = (ColumnaQuinielaForm) columnas.get(11);
+		ColumnaQuinielaForm columna13 = (ColumnaQuinielaForm) columnas.get(12);
+		ColumnaQuinielaForm columna14 = (ColumnaQuinielaForm) columnas.get(13);
+		ColumnaQuinielaForm columna15 = (ColumnaQuinielaForm) columnas.get(14); */
+		
+		%>
     		
 <html:form action="/Quiniela" method="get">
  
@@ -27,12 +49,12 @@
 							<th class="info-directo">Directos</th>
 						</tr>
 						<tr>
-							<td class="num-fila">1</td>
+							<td class="num-fila"><%=columna1.getNumColumna()%></td>
 							<td class="equipo">
-								<span>DEPORTIVO</span>
+								<span><%=columna1.getEquipoloc()%></span>
 							</td>
 							<td class="equipo">
-								<span>R.SOCIEDAD</span>
+								<span><%=columna1.getEquipovis()%></span>
 							</td>
 							
 							<td class="pronost"  BGCOLOR="#FF9933">
@@ -66,9 +88,9 @@
 						</tr>
 		
 						<tr>
-							<td>2</td>
-							<td>RAYO</td>
-							<td>VALENCIA</td>
+							<td><%=columna2.getNumColumna()%></td>
+							<td><%=columna2.getEquipoloc()%></td>
+							<td><%=columna2.getEquipovis()%></td>
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
 										<tr>
@@ -99,9 +121,9 @@
 						</tr>
 		
 						<tr>
-							<td>3</td>
-							<td>ATH.BILBAO</td>
-							<td>BARCELONA</td>
+							<td><%=columna3.getNumColumna()%></td>
+							<td><%=columna3.getEquipoloc()%></td>
+							<td><%=columna3.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -133,9 +155,9 @@
 						</tr>
 		
 						<tr>
-							<td>4</td>
-							<td>SPORTING</td>
-							<td>R.MADRID</td>
+							<td><%=columna4.getNumColumna()%></td>
+							<td><%=columna4.getEquipoloc()%></td>
+							<td><%=columna4.getEquipovis()%></td>
 							
 							<td BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -167,9 +189,9 @@
 						</tr>
 	
 						<tr>
-							<td>5</td>
-							<td>BETIS</td>
-							<td>VILLARREAL</td>
+							<td><%=columna5.getNumColumna()%></td>
+							<td><%=columna5.getEquipoloc()%></td>
+							<td><%=columna5.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -199,7 +221,9 @@
 									</table>
 							</td>
 						</tr>
-		
+						
+					
+		<%-- 
 						<tr>
 							<td>6</td>
 							<td>ESPANYOL</td>
@@ -599,7 +623,7 @@
 									</tr>	
 								</table>
 							</td>	
-						</tr>
+						</tr> --%>
 					</table>
 	
 	<html:submit>Envia</html:submit>
