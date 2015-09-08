@@ -25,7 +25,7 @@
 		ColumnaQuinielaForm columna3 = (ColumnaQuinielaForm) columnas.get(2);
 		ColumnaQuinielaForm columna4 = (ColumnaQuinielaForm) columnas.get(3);
 		ColumnaQuinielaForm columna5 = (ColumnaQuinielaForm) columnas.get(4);
-/* 		ColumnaQuinielaForm columna6 = (ColumnaQuinielaForm) columnas.get(5);
+		ColumnaQuinielaForm columna6 = (ColumnaQuinielaForm) columnas.get(5);
 		ColumnaQuinielaForm columna7 = (ColumnaQuinielaForm) columnas.get(6);
 		ColumnaQuinielaForm columna8 = (ColumnaQuinielaForm) columnas.get(7);
 		ColumnaQuinielaForm columna9 = (ColumnaQuinielaForm) columnas.get(8);
@@ -34,7 +34,7 @@
 		ColumnaQuinielaForm columna12 = (ColumnaQuinielaForm) columnas.get(11);
 		ColumnaQuinielaForm columna13 = (ColumnaQuinielaForm) columnas.get(12);
 		ColumnaQuinielaForm columna14 = (ColumnaQuinielaForm) columnas.get(13);
-		ColumnaQuinielaForm columna15 = (ColumnaQuinielaForm) columnas.get(14); */
+		ColumnaQuinielaForm columna15 = (ColumnaQuinielaForm) columnas.get(14);
 		
 		%>
     		
@@ -84,7 +84,7 @@
 										</tr>	
 									</table>
 							</td>
-							<td></td>						
+							<td><%=columna1.getResultado()%></td>						
 						</tr>
 		
 						<tr>
@@ -118,6 +118,7 @@
 										</tr>	
 									</table>	
 							</td>
+							<td><%=columna2.getResultado()%></td>	
 						</tr>
 		
 						<tr>
@@ -152,6 +153,7 @@
 										</tr>	
 									</table> 	
 							</td>
+							<td><%=columna3.getResultado()%></td>	
 						</tr>
 		
 						<tr>
@@ -186,6 +188,7 @@
 										</tr>	
 									</table>
 							</td>
+							<td><%=columna4.getResultado()%></td>	
 						</tr>
 	
 						<tr>
@@ -220,14 +223,14 @@
 										</tr>	
 									</table>
 							</td>
+							<td><%=columna5.getResultado()%></td>	
 						</tr>
 						
-					
-		<%-- 
+	
 						<tr>
-							<td>6</td>
-							<td>ESPANYOL</td>
-							<td>GETAFE</td>
+							<td><%=columna6.getNumColumna()%></td>
+							<td><%=columna6.getEquipoloc()%></td>
+							<td><%=columna6.getEquipovis()%></td>
 							
 							<td BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -256,12 +259,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna6.getResultado()%></td>	
 						</tr>
 	
 						<tr>
-							<td>7</td>
-							<td>LEVANTE</td>
-							<td>CELTA</td>
+							<td><%=columna7.getNumColumna()%></td>
+							<td><%=columna7.getEquipoloc()%></td>
+							<td><%=columna7.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -290,12 +294,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna7.getResultado()%></td>	
 						</tr>
 		
 						<tr>
-							<td>8</td>
-							<td>ALMERÍA</td>
-							<td>LEGANÉS</td>
+							<td><%=columna8.getNumColumna()%></td>
+							<td><%=columna8.getEquipoloc()%></td>
+							<td><%=columna8.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -324,12 +329,13 @@
 										</tr>	
 									</table>
 							</td>
+							<td><%=columna8.getResultado()%></td>	
 						</tr>
 					
 						<tr>
-							<td>9</td>
-							<td>MIRANDÉS</td>
-					        <td>ZARAGOZA</td>
+							<td><%=columna9.getNumColumna()%></td>
+							<td><%=columna9.getEquipoloc()%></td>
+							<td><%=columna9.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -358,12 +364,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna9.getResultado()%></td>	
 						</tr>
 		
 						<tr>
-							<td>10</td>
-							<td>LLAGOSTERA</td>
-							<td>OSASUNA</td>
+							<td><%=columna10.getNumColumna()%></td>
+							<td><%=columna10.getEquipoloc()%></td>
+							<td><%=columna10.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -392,12 +399,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna10.getResultado()%></td>	
 						</tr>
 		
 						<tr>
-							<td>11</td>
-							<td>OVIEDO</td>
-							<td>LUGO</td>
+							<td><%=columna11.getNumColumna()%></td>
+							<td><%=columna11.getEquipoloc()%></td>
+							<td><%=columna11.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -426,12 +434,13 @@
 										</tr>	
 									</table>
 							</td>
+							<td><%=columna11.getResultado()%></td>	
 						</tr>
 				
 						<tr>
-							<td>12</td>
-							<td>GIMNÁSTIC</td>
-							<td>ALBACETE</td>
+							<td><%=columna12.getNumColumna()%></td>
+							<td><%=columna12.getEquipoloc()%></td>
+							<td><%=columna12.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -460,12 +469,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna12.getResultado()%></td>	
 						</tr>
 		
 						<tr>						
-							<td>13</td>
-							<td>ALCORCÓN</td>
-							<td>MALLORCA</td>
+							<td><%=columna13.getNumColumna()%></td>
+							<td><%=columna13.getEquipoloc()%></td>
+							<td><%=columna13.getEquipovis()%></td>
 
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -494,12 +504,13 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna13.getResultado()%></td>	
 						</tr>
 			
 						<tr>
-							<td>14</td>
-							<td>CÓRDOBA</td>
-							<td>VALLADOLID</td>
+							<td><%=columna14.getNumColumna()%></td>
+							<td><%=columna14.getEquipoloc()%></td>
+							<td><%=columna14.getEquipovis()%></td>
 							
 							<td  BGCOLOR="#FF9933">
 									<table style="width:50px">
@@ -528,6 +539,7 @@
 										</tr>	
 									</table> 
 							</td>
+							<td><%=columna14.getResultado()%></td>	
 						</tr>
 					</table>
 				
@@ -542,9 +554,9 @@
 						</thead>
 						<tr>
 							
-							<td class="num-fila" rowspan="2">15</td>
+							<td class="num-fila" rowspan="2"><%=columna15.getNumColumna()%></td>
 							<td class="enfrentamientos">
-								<span>Bielorrusia</span>
+								<span><%=columna14.getEquipoloc()%></span>
 							</td>
 							
 							<td BGCOLOR="#FAAC58">
@@ -583,11 +595,12 @@
 							</td>
 								
 							<td class="info-dir gray" rowspan="2"> 
+							<%=columna15.getResultado()%>
 							</td>
 						</tr>
 						<tr>
 							<td class="enfrentamientos">
-								<span>España</span>
+								<span><%=columna15.getEquipovis()%></span>
 							</td>
 							<td BGCOLOR="#FAAC58">
 								<table style="width:100px">
@@ -622,8 +635,9 @@
 										
 									</tr>	
 								</table>
-							</td>	
-						</tr> --%>
+							</td>
+							
+						</tr> 
 					</table>
 	
 	<html:submit>Envia</html:submit>

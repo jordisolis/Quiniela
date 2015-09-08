@@ -23,45 +23,45 @@ import com.jsr.core.vista.constants.WebConstants;
 /**
  * Clase de utilidades.
  *
- * @author indra
+ * @author jordisolis
  * @version
  */
 
 public final class PropertiesUtil {
-
-    /**
-     * Método encargado de obtener el texto almacenado en el archivo de
-     * properties RecursosAplicacion.properties a partir de la key del texto
-     * buscado.
-     *
-     * @param key
-     *            key único que identifica el texto dentro del archivo.
-     * @return String con el texto buscado
-     */
-    public static String getConfigProperties(String key) {
-        ResourceBundle rb = 
-                ResourceBundle.getBundle(WebConstants.PROP_CONFIGURATION);
-
-        return rb.getString(key).trim();
-    }
-    
-    /**
-     * Método encargado de obtener el texto almacenado en el archivo de
-     * properties RecursosAplicacion.properties a partir de la key del texto
-     * buscado.
-     * 
-     * ATENCIÓN !!! no borra espacios de los ficheros de propiedades.
-     *
-     * @param key
-     *            key único que identifica el texto dentro del archivo.
-     * @return String con el texto buscado
-     */
-    public static String getConfigPropertiesNoTrim(String key) {
-        ResourceBundle rb = 
-                ResourceBundle.getBundle(WebConstants.PROP_CONFIGURATION);
-
-        return rb.getString(key);
-    }
+//
+//    /**
+//     * Método encargado de obtener el texto almacenado en el archivo de
+//     * properties RecursosAplicacion.properties a partir de la key del texto
+//     * buscado.
+//     *
+//     * @param key
+//     *            key único que identifica el texto dentro del archivo.
+//     * @return String con el texto buscado
+//     */
+//    public static String getConfigProperties(String key) {
+//        ResourceBundle rb = 
+//                ResourceBundle.getBundle(WebConstants.PROP_CONFIGURATION);
+//
+//        return rb.getString(key).trim();
+//    }
+//    
+//    /**
+//     * Método encargado de obtener el texto almacenado en el archivo de
+//     * properties RecursosAplicacion.properties a partir de la key del texto
+//     * buscado.
+//     * 
+//     * ATENCIÓN !!! no borra espacios de los ficheros de propiedades.
+//     *
+//     * @param key
+//     *            key único que identifica el texto dentro del archivo.
+//     * @return String con el texto buscado
+//     */
+//    public static String getConfigPropertiesNoTrim(String key) {
+//        ResourceBundle rb = 
+//                ResourceBundle.getBundle(WebConstants.PROP_CONFIGURATION);
+//
+//        return rb.getString(key);
+//    }
 
     /**
      * Método encargado de obtener el texto almacenado en el archivo de

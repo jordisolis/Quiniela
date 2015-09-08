@@ -18,6 +18,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_35"/>
-	<classpathentry kind="lib" path="D:/ACCION_MIND/Workspace/GAP/WebContent/WEB-INF/lib/flexjson-jdk14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jordi/Desktop/Entorno de desarrollo/flexjson-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jordi/Desktop/Entorno de desarrollo/jsoup-1.6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -12,6 +12,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.DispatchAction;
 
+import com.jsr.struts.core.util.ConexionQuiniela;
 import com.jsr.struts.form.ColumnaQuinielaForm;
 import com.jsr.struts.form.LoginForm;
 
@@ -24,17 +25,19 @@ public class InicioAction  extends DispatchAction{
 		
 //        LoginForm loginForm = (LoginForm) form;
       HttpSession ses = request.getSession(true);
-      List<ColumnaQuinielaForm> columna = new ArrayList<ColumnaQuinielaForm>();
-      ColumnaQuinielaForm object1 = new  ColumnaQuinielaForm("EQUIPO_L1","EQUIPO_V1","1","1");
-      ColumnaQuinielaForm object2 = new  ColumnaQuinielaForm("EQUIPO_L2","EQUIPO_V2","2","1");
-      ColumnaQuinielaForm object3 = new  ColumnaQuinielaForm("EQUIPO_L3","EQUIPO_V3","3","1");
-      ColumnaQuinielaForm object4 = new  ColumnaQuinielaForm("EQUIPO_L4","EQUIPO_V4","4","1");
-      ColumnaQuinielaForm object5 = new  ColumnaQuinielaForm("EQUIPO_L5","EQUIPO_V5","5","1");
-      columna.add(object1);
-      columna.add(object2);
-      columna.add(object3);
-      columna.add(object4);
-      columna.add(object5);
+      List<ColumnaQuinielaForm> columna = null;
+//      ColumnaQuinielaForm object1 = new  ColumnaQuinielaForm("EQUIPO_L1","EQUIPO_V1","1","1");
+//      ColumnaQuinielaForm object2 = new  ColumnaQuinielaForm("EQUIPO_L2","EQUIPO_V2","2","1");
+//      ColumnaQuinielaForm object3 = new  ColumnaQuinielaForm("EQUIPO_L3","EQUIPO_V3","3","1");
+//      ColumnaQuinielaForm object4 = new  ColumnaQuinielaForm("EQUIPO_L4","EQUIPO_V4","4","1");
+//      ColumnaQuinielaForm object5 = new  ColumnaQuinielaForm("EQUIPO_L5","EQUIPO_V5","5","1");
+//      columna.add(object1);
+//      columna.add(object2);
+//      columna.add(object3);
+//      columna.add(object4);
+//      columna.add(object5);
+      ConexionQuiniela conequini = new ConexionQuiniela();
+      columna=conequini.conexionquiniela();
       ses.setAttribute("pintarquini", columna);
 	return mapping.findForward("quiniela");
 	}
