@@ -1,6 +1,5 @@
 package com.jsr.struts.action;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +13,6 @@ import org.apache.struts.actions.DispatchAction;
 
 import com.jsr.struts.core.util.ConexionQuiniela;
 import com.jsr.struts.form.ColumnaQuinielaForm;
-import com.jsr.struts.form.LoginForm;
 
 public class InicioAction  extends DispatchAction{
 
@@ -42,6 +40,14 @@ public class InicioAction  extends DispatchAction{
 	return mapping.findForward("quiniela");
 	}
 
+	
+	
+	public ActionForward estadisticas(ActionMapping mapping, ActionForm  form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+		
+		return mapping.findForward("estadisticas");
+	}
 	
 	
 	

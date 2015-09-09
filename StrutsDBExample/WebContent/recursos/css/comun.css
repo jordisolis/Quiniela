@@ -114,3 +114,218 @@ a.boton {
     font-size: 11px;
     color: #555555;
 }
+
+/* CUERPO DE TODAS LAS PAGINAS.  */
+
+.w1 {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+}
+.w2 {
+    float: left;
+    left: 50%;
+    position: relative;
+    width: 1020px;
+}
+.w3 {
+    float: left;
+    left: -50%;
+    position: relative;
+    width: 1020px;
+}
+
+body {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    -x-system-font: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F2F2F2;
+    background-image: url("../css/images/bg-page.jpg");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    color: #717171;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 17px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    min-width: 1000px;
+}
+
+#wrapper {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../css/images/body.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    background-size: auto auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 1020px;
+}
+.wrapper-holder {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 1020px;
+}
+#header {
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 1020px;
+}
+.header-holder {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    width: 1000px;
+}
+.logo {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../css/images/logo.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    float: left;
+    height: 58px;
+    margin-bottom: 0;
+    margin-left: 37px;
+    margin-right: 0;
+    margin-top: 16px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-indent: -9999px;
+    width: 300px;
+}
+.logo a {
+    display: block;
+    height: 100%;
+}
+.header-holder img {
+    float: right;
+}
+
+.big_banner {
+    float: right;
+    margin-right: 5px;
+}
+
+.section {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../css/images/bg-nav.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    height: 50px;
+    overflow-x: visible;
+    overflow-y: visible;
+    position: relative;
+    width: 1020px;
+}
+.section-holder {
+    float: left;
+    left: 50%;
+    position: relative;
+}
+.section-frame {
+    float: left;
+    left: -50%;
+    position: relative;
+}
+
+#nav {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    -x-system-font: none;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 48px;
+    line-height: normal;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+#nav li {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../css/images/bg-nav-separator.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    float: left;
+    margin-bottom: 0;
+    margin-left: -2px;
+    margin-right: 0;
+    margin-top: 0;
+}
+#nav li a {
+    color: #FFFFFF;
+    float: left;
+    padding-bottom: 19px;
+    padding-left: 60px;
+    padding-right: 103px;
+    padding-top: 14px;
+}
+#nav li.active a {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../images/arrow.gif");
+    background-origin: padding-box;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+a {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    color: #000000;
+}

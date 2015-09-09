@@ -21,72 +21,96 @@
 
 </head>
 <body>
+	<div class="w1">
+		<div class="w2">
+			<div class="w3">
+				<div id="wrapper">
+					<div class="wrapper-holder">
+						<div id="header">
+							<div class="header-holder">
+								<strong class="logo"> <a title="Inicio Quiniela 15"
+									href="/">Quiniela Peña Solis</a>
+								</strong>
+								<div class="big_banner">
+									<script type="text/javascript">
+										hoje = new Date();
+										numero_de_imagens = 2;
+										segundos = hoje.getSeconds();
+										numero = segundos % numero_de_imagens;
+										if (numero == 0) {
+											banner = "recursos/img/marca.jpg";
+											link = "http://marca.com";
+											alvo = "_self";
+										}
+										if (numero == 1) {
+											banner = "recursos/img/as.jpg";
+											link = "http://as.com";
+											alvo = "_self";
+										}
+										document
+												.write('<a href="' + link + '" target="' + alvo + '" ><img src="' + banner + '" border=0></a><br><br>');
+									</script>
 
-<html:form action="/Inicio">
-<H1>PAGINA INICIO</H1>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-holder">
+								<div class="section-frame">
+									<ul id="nav">
+										<li><a href="/StrutsDBExample">Inicio</a></li>
+										<li><a href="/StrutsDBExample/Inicio.html?metodo=estadisticas"
+											rel="nofollow">Estadisticas</a>
+										<li><a href="/StrutsDBExample/Inicio.html?metodo=quiniela"
+											rel="nofollow">Registro</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<html:form action="/Inicio">
+							<H1>PAGINA INICIO</H1>
 
 
-	
-	<input type="button" value="Estadisticas" id="boton-estadisticas" />
 
-		<%	String  desabilitar ;
+							<input type="button" value="Estadisticas" id="boton-estadisticas" />
+
+							<%	String  desabilitar ;
 			desabilitar	= (String) session.getAttribute("habilitar_boton");
 		if(desabilitar != null)	{	
 			if(desabilitar.equals("false")){
 		%>
-			<input type="button" value="Comprobar Quiniela"
-				 id="comQuiniela"/>
-				
-				<jsp:include page="popupComQuiniela.jsp" />
-				
-		<%}
+							<input type="button" value="Comprobar Quiniela" id="comQuiniela" />
+
+							<jsp:include page="popupComQuiniela.jsp" />
+
+							<%}
 		}else{%>
-				
-		<input type="button" value="Registro Quiniela" id="boton-registroquini"/>
-				
-			<%}%>
 
-        <jsp:include page="manejarErrores.jsp" />
+							<input type="button" value="Registro Quiniela"
+								id="boton-registroquini" />
 
-</html:form>
-    <div id="dialog-loading" title="enviando" style="display:none;">
-        <table>
-            <tr>
-                <td>
-                    <div id="contenido-image-loading">
-                        <img alt="" src="recursos/img/loading.gif" height='30' width='30'/>
-                    </div>
-                </td>
-                <td><div id="contenido-dialog-loading"></div></td>
-            </tr>
-        </table>
-    </div>
-	<script type="text/javascript">
-	
-	  $(document).ready(function() {
-		  
-		   $("#boton-registroquini").click(submitRegisterQuiniela);
-	        $("#boton-estadisticas").click(submitEstadisticas);
-	  });
-	
+							<%}%>
 
-		function submitRegisterQuiniela() {	
-    		document.forms[0].action = "Inicio.html?metodo=quiniela";
-			document.forms[0].submit(); 	
-    	}
+							<jsp:include page="manejarErrores.jsp" />
 
-		/* function submitComprobarQuiniela(){
-			document.forms[0].action = "Inicio.html?metodo=comprobar";
-			document.forms[0].submit(); 	
-		} */
-		
-		function submitEstadisticas(){
-			document.forms[0].action = "Inicio.html?metodo=estadisticas";
-			document.forms[0].submit(); 
-			
-		}
-		/*]]>*/
-	</script>
+						</html:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog-loading" title="enviando" style="display: none;">
+		<table>
+			<tr>
+				<td>
+					<div id="contenido-image-loading">
+						<img alt="" src="recursos/img/loading.gif" height='30' width='30' />
+					</div>
+				</td>
+				<td><div id="contenido-dialog-loading"></div></td>
+			</tr>
+		</table>
+	</div>
 
 </body>
 </html>

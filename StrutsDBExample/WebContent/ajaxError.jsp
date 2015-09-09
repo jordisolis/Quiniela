@@ -10,11 +10,11 @@
 {
     "respuesta": "ERROR"
     
-    <logic:messagesPresent name="errorNoSession">,
+<%--     <logic:messagesPresent name="errorNoSession">,
         "tipoError": "errorNoSession",
         "descripcion": "<html:errors name="errorNoSession"/>",
         "loginPage": "<%=PropertiesUtil.getConfigProperties("urlFinSession") %>"
-    </logic:messagesPresent>
+    </logic:messagesPresent> --%>
     
     <logic:messagesPresent name="fatalError">,
 	    "tipoError": "Error",
