@@ -5,9 +5,9 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<link rel="stylesheet" type="text/css" media="all" href="recursos/css/login.css"  />
 	<title>Registro</title>
 	<script type="text/javascript"  src="recursos/js/jquery-1.4.4.min.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="<%=request.getContextPath()%>/recursos/css/registro.css"/>
 	<script type="text/javascript">
 	 $(document).ready(function() {
 		  
@@ -29,59 +29,95 @@
 		</script>
 	
 </head>
-<body bgcolor="silver">
-	<br></br>
-	<body>
-		<html:html>
-    		<div style="color:red">
-    			<html:errors />
-    		</div>
-    		
-		<html:form action="/Registro" method="get">
-		<fieldset style="height:400px;width:800px;">
-			<h1>REGISTRO DE USUARIO:</h1>
-			<table>
-				<tr>
-					<td>		
-						Nombre Usuario:
-					</td>
-					<td>
-						<html:text property="userName" size="50" />
-					</td>
-				</tr>
-				<br>
-				<tr>
-					<td>		
-						Password:
-					</td>
-					<td>	
-						<html:password property="password" size="30" />
-					</td>
-				</tr>
-				<br>
-				<tr>
-					<td>		
-						 Repite Password:
-					</td>
-					<td>	
-						<html:password property="repassword" size="30" />
-					</td>
-				</tr>
-				<br>
-				<tr>
-					<td>		
-						Email:
-					</td>
-					<td>	
-						<html:text property="email" size="30" />
-					</td>
-				</tr>		
-			</table>
-			</fieldset>	
-			<%-- <html:submit >Envia</html:submit> --%>
-			<input class="botoncontacto" id="boton-registro" type="submit" name="submitButtonName" value="">
-			<br><br>
-		</html:form>
-	</html:html>
+
+<br></br>
+<body>
+	<div class="w1">
+		<div class="w2">
+			<div class="w3">
+				<div id="wrapper">
+					<div class="wrapper-holder">
+						<div id="header">
+							<div class="header-holder">
+								<strong class="logo"> <a title="Inicio"
+									href="/">Quiniela Peña Solis</a>
+								</strong>
+								<div class="big_banner">
+									<script type="text/javascript">
+										hoje = new Date();
+										numero_de_imagens = 2;
+										segundos = hoje.getSeconds();
+										numero = segundos % numero_de_imagens;
+										if (numero == 0) {
+											banner = "recursos/img/marca.jpg";
+											link = "http://marca.com";
+											alvo = "_self";
+										}
+										if (numero == 1) {
+											banner = "recursos/img/as.jpg";
+											link = "http://as.com";
+											alvo = "_self";
+										}
+										document
+												.write('<a href="' + link + '" target="' + alvo + '" ><img src="' + banner + '" border=0></a><br><br>');
+									</script>
+
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-holder">
+								<div class="section-frame">
+									<ul id="nav">
+										<li><a href="/StrutsDBExample">Inicio</a></li>
+										<li><a
+											href="/StrutsDBExample/Index.html?metodo=login"
+											rel="nofollow">Login</a>							
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div style="color: red">
+							<html:errors />
+						</div>
+						<div class="registro">	
+						<html:form action="/Registro" method="get">
+							<fieldset style="height: 300px; width: 600px;">
+								<h1>REGISTRO DE USUARIO:</h1>
+								<table>
+									<tr>
+										<td>Nombre Usuario:</td>
+										<td><html:text property="userName" size="50" /></td>
+									</tr>
+									<br>
+									<tr>
+										<td>Password:</td>
+										<td><html:password property="password" size="30" /></td>
+									</tr>
+									<br>
+									<tr>
+										<td>Repite Password:</td>
+										<td><html:password property="repassword" size="30" /></td>
+									</tr>
+									<br>
+									<tr>
+										<td>Email:</td>
+										<td><html:text property="email" size="30" /></td>
+									</tr>
+								</table>
+							</fieldset>
+							<%-- <html:submit >Envia</html:submit> --%>
+							<input class="botoncontacto" id="boton-registro" type="submit"
+								name="submitButtonName" value="Registrar" >
+							<br>
+							<br>
+						</html:form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

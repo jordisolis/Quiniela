@@ -49,6 +49,13 @@ public class InicioAction  extends DispatchAction{
 		return mapping.findForward("estadisticas");
 	}
 	
+	public ActionForward comprobar(ActionMapping mapping, ActionForm  form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+		
+		return mapping.findForward("comprobar");
+	}
+	
 	
 	
 }

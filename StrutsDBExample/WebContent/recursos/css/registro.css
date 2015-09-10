@@ -65,7 +65,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
-    width: 1020px; 
+    width: 1020px;
     height: 700px;
 }
 #header {
@@ -214,12 +214,11 @@ a {
     -moz-text-decoration-style: solid;
     color: #000000;
 }
-.login {
+
+.registro {
 	
 	margin-bottom: 0;
-    margin-left: 372px;
+    margin-left: 205px;
     margin-right: 0;
-    margin-top: 133px;
+     margin-top: 103px;
 	}
-}
-

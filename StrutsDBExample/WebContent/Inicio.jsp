@@ -7,7 +7,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Página de inicio.</title>
-<link rel="stylesheet" type="text/css" media="all" href="recursos/css/comun.css"  />
 <link rel="stylesheet" type="text/css" media="all" href="recursos/css/jquery-ui-1.8.9.custom.css"  />
 <script type="text/javascript"  src="recursos/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript"  src="recursos/js/jquery.bgiframe.min.js"></script>
@@ -28,7 +27,7 @@
 					<div class="wrapper-holder">
 						<div id="header">
 							<div class="header-holder">
-								<strong class="logo"> <a title="Inicio Quiniela 15"
+								<strong class="logo"> <a title="Inicio"
 									href="/">Quiniela Peña Solis</a>
 								</strong>
 								<div class="big_banner">
@@ -62,34 +61,16 @@
 										<li><a href="/StrutsDBExample/Inicio.html?metodo=estadisticas"
 											rel="nofollow">Estadisticas</a>
 										<li><a href="/StrutsDBExample/Inicio.html?metodo=quiniela"
-											rel="nofollow">Registro</a></li>
+											rel="nofollow">Quiniela</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						<html:form action="/Inicio">
-							<H1>PAGINA INICIO</H1>
+							<H1>PAGINA PRINCIPAL</H1>
 
 
 
-							<input type="button" value="Estadisticas" id="boton-estadisticas" />
-
-							<%	String  desabilitar ;
-			desabilitar	= (String) session.getAttribute("habilitar_boton");
-		if(desabilitar != null)	{	
-			if(desabilitar.equals("false")){
-		%>
-							<input type="button" value="Comprobar Quiniela" id="comQuiniela" />
-
-							<jsp:include page="popupComQuiniela.jsp" />
-
-							<%}
-		}else{%>
-
-							<input type="button" value="Registro Quiniela"
-								id="boton-registroquini" />
-
-							<%}%>
 
 							<jsp:include page="manejarErrores.jsp" />
 
