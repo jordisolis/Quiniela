@@ -19,7 +19,7 @@ public class InicioAction  extends DispatchAction{
 	public ActionForward quiniela(ActionMapping mapping, ActionForm  form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-
+ 
 		
 //        LoginForm loginForm = (LoginForm) form;
       HttpSession ses = request.getSession(true);

@@ -20,7 +20,7 @@ public class ConexionQuiniela {
 
 	public ArrayList<ColumnaQuinielaForm> conexionquiniela() throws IOException{
 
-	  		//CONECTARSE CON EL PROXY DE INDRA.
+	  		//CONECTARSE CON EL PROXY DE INDRA .
 	  		System.setProperty("http.proxyHost", "proxy.indra.es");
 	  		System.setProperty("http.proxyPort", "8080");
 	  

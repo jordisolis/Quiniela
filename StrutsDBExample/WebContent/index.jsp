@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="recursos/css/comun.css"  />
 	<title>Pagina Inicio</title>
 	<script type="text/javascript">
-	<!--
+	<!-- 
 		today = new Date();
 		if(today.getMinutes() < 10){
 			pad = "0";
