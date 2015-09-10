@@ -329,3 +329,7 @@ a {
     -moz-text-decoration-style: solid;
     color: #000000;
 }
+/*Clase para errores */
+.conBordeError{
+    border: solid 1px red;
+}

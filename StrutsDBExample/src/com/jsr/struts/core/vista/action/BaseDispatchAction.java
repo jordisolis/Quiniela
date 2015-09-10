@@ -1,16 +1,3 @@
-//------------------------------------------------------------
-//
-//    © Telefónica de España, S.A.
-//
-////----------------------------------------------------------
-// Los contenidos de este fichero son propiedad de Telefónica
-// de España S.A. titular del copyright. Este fichero
-// solo podrá ser copiado, distribuido y utilizado, en su
-// totalidad o en parte, con el permiso escrito de Telefónica
-// de España S.A., o de acuerdo con los términos y
-// condiciones establecidas en el acuerdo/contrato bajo el que
-// se suministra.
-////----------------------------------------------------------
 
 package com.jsr.struts.core.vista.action;
 

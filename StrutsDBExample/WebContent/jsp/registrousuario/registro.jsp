@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="/struts-html" prefix="html" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -84,28 +85,36 @@
 						<html:form action="/Registro" method="get">
 							<fieldset style="height: 300px; width: 600px;">
 								<h1>REGISTRO DE USUARIO:</h1>
-								<table>
-									<tr>
-										<td>Nombre Usuario:</td>
-										<td><html:text property="userName" size="50" /></td>
-									</tr>
-									<br>
-									<tr>
-										<td>Password:</td>
-										<td><html:password property="password" size="30" /></td>
-									</tr>
-									<br>
-									<tr>
-										<td>Repite Password:</td>
-										<td><html:password property="repassword" size="30" /></td>
-									</tr>
-									<br>
-									<tr>
-										<td>Email:</td>
-										<td><html:text property="email" size="30" /></td>
-									</tr>
-								</table>
-							</fieldset>
+									<table>
+										<tr>
+											<td>Nombre Usuario:</td>
+											<td><html:text property="userName" size="50"
+													styleClass="conBorde"
+													errorStyleClass="literal conBorde conBordeError" /></td>
+										</tr>
+										<br>
+										<tr>
+											<td>Password:</td>
+											<td><html:password property="password" size="30"
+													styleClass="conBorde"
+													errorStyleClass="conBorde conBordeError" /></td>
+										</tr>
+										<br>
+										<tr>
+											<td>Repite Password:</td>
+											<td><html:password property="repassword" size="30"
+													styleClass="conBorde"
+													errorStyleClass="conBorde conBordeError" /></td>
+										</tr>
+										<br>
+										<tr>
+											<td>Email:</td>
+											<td><html:text property="email" size="30"
+													styleClass="conBorde"
+													errorStyleClass="conBorde conBordeError" /></td>
+										</tr>
+									</table>
+								</fieldset>
 							<%-- <html:submit >Envia</html:submit> --%>
 							<input class="botoncontacto" id="boton-registro" type="submit"
 								name="submitButtonName" value="Registrar" >
@@ -120,4 +129,36 @@
 	</div>
 
 </body>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(id("boton-registro")).click(EnvioForm);
+
+});
+
+
+
+
+function EnvioForm(){
+	if($(id("userName")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+	if($(id("password")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+	if($(id("repassword")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+	if($(id("email")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+}
+
+
+
+
+</script>
 </html>

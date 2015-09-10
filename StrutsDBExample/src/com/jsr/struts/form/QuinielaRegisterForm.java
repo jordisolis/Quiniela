@@ -156,14 +156,18 @@ public class QuinielaRegisterForm extends ActionForm{
 			errors.add("partido14", new ActionMessage("error.partido14.required"));
 
 		}
-		if (partido15L == null && partido15V.length() < 1) {
-			errors.add("partido15", new ActionMessage("error.partido15.required"));
+		if (partido15L == null && partido15L.length() < 1) {
+			errors.add("partido15L", new ActionMessage("error.partido15.required"));
+
+		}
+		if (partido15V == null && partido15V.length() < 1) {
+			errors.add("partido15V", new ActionMessage("error.partido15.required"));
 
 		}
 		
 	}
 	
-	//Errores si no se seliona nada en alguna fila.
+	//Errores para no meter triples.
 		private void ErrorTriple(ActionErrors errors) {
 			if (partido1.length > 2) {
 				errors.add("partido1", new ActionMessage(

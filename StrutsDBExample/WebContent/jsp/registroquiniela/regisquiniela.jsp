@@ -534,7 +534,9 @@
 								</tr>
 							</table>
 
-							<html:submit>Envia</html:submit>
+							<input  id="boton-enviar" type="submit"
+								value="Enviar" >
+							
 							<br>
 							<br>
 						</html:form>
@@ -545,4 +547,38 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(id("boton-enviar")).click(NumPartido);
+
+});
+
+
+function NumPartido(){
+	
+	var partido ="partido";
+	for (var int = 1; int < 15; int++) {
+		partido += partido + int;
+		EnvioForm(partido);
+	}
+	if($(id("partido15L")).val() == ""){
+		$(id("partido15L")).addClass('conBordeError');
+	}
+	if($(id("partido15V")).val() == ""){
+		$(id("partido15V")).addClass('conBordeError');
+	}
+	
+}
+
+function EnvioForm(partido){
+	if($(id(partido)).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+}
+
+
+
+
+</script>
 </html>

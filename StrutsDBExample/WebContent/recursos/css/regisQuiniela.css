@@ -361,4 +361,10 @@ a {
     margin-right: 0;
     margin-top: 9px;
 }    
+
+/*Clase para errores */
+.conBordeError{
+    border: solid 1px red;
+}
+
     

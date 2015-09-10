@@ -222,3 +222,12 @@ a {
     margin-right: 0;
      margin-top: 103px;
 	}
+	
+/*Clase para errores */
+.conBordeError{
+    border: solid 1px red;
+}	
+
+.conBorde{
+    border: solid 1px #007599;
+}

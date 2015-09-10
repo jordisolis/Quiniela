@@ -111,4 +111,29 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(id("boton-enviar")).click(EnvioForm);
+
+});
+
+
+
+
+function EnvioForm(){
+	if($(id("userName")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+	
+	if($(id("password")).val() == ""){
+		$(id(partido)).addClass('conBordeError');
+	}
+		
+	
+}
+
+
+
+
+</script>
 </html>
