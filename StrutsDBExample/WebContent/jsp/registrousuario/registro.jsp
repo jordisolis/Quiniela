@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="/struts-html" prefix="html" %>
+<%-- <%@ taglib uri="/struts-html" prefix="html" %> --%>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@ taglib uri="http://struts.apache.org/tags-html-el" prefix="html-el"%>
+<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
+<%@ taglib uri="http://struts.apache.org/tags-tiles-el" prefix="tiles-el"%>
+<%@ taglib uri="http://struts.apache.org/tags-nested" prefix="nested"%>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,7 +29,12 @@
 		var r = confirm("¿Estas seguro qu quieres registrarte?");
 		if (r == true) {
 		  
-		    document.forms[0].submit();
+			if($("#password").val() != $("repassword").val()){
+				 alert('Los password son distintos');   
+			}
+			else{
+		    	document.forms[0].submit();
+			}	
 		} 
 		
 		
@@ -78,11 +91,9 @@
 								</div>
 							</div>
 						</div>
-						<div style="color: red">
-							<html:errors />
-						</div>
+					
 						<div class="registro">	
-						<html:form action="/Registro" method="get">
+						<html:form action="/Registro" method="post">
 							<fieldset style="height: 300px; width: 600px;">
 								<h1>REGISTRO DE USUARIO:</h1>
 									<table>
@@ -90,28 +101,33 @@
 											<td>Nombre Usuario:</td>
 											<td><html:text property="userName" size="50"
 													styleClass="conBorde"
-													errorStyleClass="literal conBorde conBordeError" /></td>
+													styleId="userName"
+													errorStyleClass="conBordeError" 
+													 /></td>
 										</tr>
 										<br>
 										<tr>
 											<td>Password:</td>
 											<td><html:password property="password" size="30"
 													styleClass="conBorde"
-													errorStyleClass="conBorde conBordeError" /></td>
+													styleId="password"
+													errorStyleClass="conBordeError" /></td>
 										</tr>
 										<br>
 										<tr>
 											<td>Repite Password:</td>
 											<td><html:password property="repassword" size="30"
 													styleClass="conBorde"
-													errorStyleClass="conBorde conBordeError" /></td>
+													styleId="repassword"
+													errorStyleClass="conBordeError" /></td>
 										</tr>
 										<br>
 										<tr>
 											<td>Email:</td>
 											<td><html:text property="email" size="30"
 													styleClass="conBorde"
-													errorStyleClass="conBorde conBordeError" /></td>
+													styleId="email"
+													errorStyleClass="conBordeError" /></td>
 										</tr>
 									</table>
 								</fieldset>
@@ -129,36 +145,5 @@
 	</div>
 
 </body>
-<script type="text/javascript">
-$(document).ready(function() {
-	$(id("boton-registro")).click(EnvioForm);
 
-});
-
-
-
-
-function EnvioForm(){
-	if($(id("userName")).val() == ""){
-		$(id(partido)).addClass('conBordeError');
-	}
-	
-	if($(id("password")).val() == ""){
-		$(id(partido)).addClass('conBordeError');
-	}
-	
-	if($(id("repassword")).val() == ""){
-		$(id(partido)).addClass('conBordeError');
-	}
-	
-	if($(id("email")).val() == ""){
-		$(id(partido)).addClass('conBordeError');
-	}
-	
-}
-
-
-
-
-</script>
 </html>

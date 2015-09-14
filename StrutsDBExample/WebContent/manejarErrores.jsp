@@ -1,7 +1,4 @@
 <%@page import="java.util.Iterator"%>
-<%@page import="org.apache.struts.taglib.TagUtils"%>
-<%@page import="org.apache.struts.action.ActionMessages"%>
-<%@page import="org.apache.struts.Globals"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
@@ -105,7 +102,7 @@
     
     <%-- Mostramos los errores de validacion mediante ventana modales --%>
     <logic:messagesPresent>
-        <%
+<%--         <%
             // Tratamiento para setear el foco en la propiedad de error
             String errorKey = Globals.ERROR_KEY;
             ActionMessages errors = TagUtils.getInstance()
@@ -118,7 +115,7 @@
             	sbProp.append((String) iter.next());
             	sbProp.append(",");
             } 
-         %> 
+         %>  --%>
 
         <%-- 
             - Iterar todos los errores, presentes en el objeto actionErrors.
@@ -132,7 +129,7 @@
 
             var html = "<html:errors bundle='errores'/>";
             alertaError(html, function(){
-                var allProps = '<%=sbProp.toString()%>';
+<%--                 var allProps = '<%=sbProp.toString()%>'; --%>
                 var lstProps = allProps.split(",");
 
                 for(var i = 0; i < (lstProps.length-1); i++ ){

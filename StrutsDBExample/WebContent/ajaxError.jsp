@@ -1,5 +1,4 @@
 <%@page import="com.jsr.struts.core.util.PropertiesUtil"%>
-<%@page import="org.apache.struts.Globals"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
