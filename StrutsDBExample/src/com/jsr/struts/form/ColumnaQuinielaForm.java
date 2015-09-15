@@ -6,7 +6,7 @@ public class ColumnaQuinielaForm {
 	private String equipovis;
 	private String numColumna;
 	private String resultado;
-	
+	private String jornada;
 	
 	
 	
@@ -54,6 +54,20 @@ public class ColumnaQuinielaForm {
 	}
 	public void setResultado(String resultado) {
 		this.resultado = resultado;
+	}
+
+	/**
+	 * @return the jornada
+	 */
+	public String getJornada() {
+		return jornada;
+	}
+
+	/**
+	 * @param jornada the jornada to set
+	 */
+	public void setJornada(String jornada) {
+		this.jornada = jornada;
 	}
 	
 	

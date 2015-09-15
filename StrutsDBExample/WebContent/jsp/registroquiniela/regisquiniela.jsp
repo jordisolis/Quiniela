@@ -91,6 +91,7 @@
 		
 		%>
 				<div class="quiniela">	
+				<h1><%=columna1.getJornada()%></h1>
 						<html:form action="/Quiniela" method="get">
 
 							<table class="tabla-quini clasi-grup tabla-quiniela">

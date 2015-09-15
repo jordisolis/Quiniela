@@ -35,7 +35,7 @@ public class InicioAction  extends DispatchAction{
 //      columna.add(object4);
 //      columna.add(object5);
       ConexionQuiniela conequini = new ConexionQuiniela();
-      columna=conequini.conexionquiniela();
+      columna=conequini.conexionquinielaPronostico();
       ses.setAttribute("pintarquini", columna);
 	return mapping.findForward("quiniela");
 	}
@@ -52,7 +52,11 @@ public class InicioAction  extends DispatchAction{
 	public ActionForward comprobar(ActionMapping mapping, ActionForm  form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-		
+	      HttpSession ses = request.getSession(true);
+	      List<ColumnaQuinielaForm> columna = null;
+	      ConexionQuiniela conequini = new ConexionQuiniela();
+	      columna=conequini.conexionquinielaResultados();
+	      ses.setAttribute("pintarquini", columna);
 		return mapping.findForward("comprobar");
 	}
 	
